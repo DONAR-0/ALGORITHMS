@@ -28,6 +28,7 @@ public class Scenario01<E> {
 
 	/**
 	 *Adds
+	 * Big O = o(n)
 	 * */
 	public void add(final E element) {
 		if (this.size == this.objects.length) {
@@ -39,14 +40,14 @@ public class Scenario01<E> {
 	
 	/**
 	 * Put value in Dynamic Array
-	 *
+	 * Big O = o(n)
 	 * */
 	public void put(final int index,E element) {
 		this.objects[index] = element;
 	}
 	
 	/**
-	 *
+	 * Big O = o(1)
 	 *
 	 * */
 	public E get(final int index) {
@@ -59,6 +60,8 @@ public class Scenario01<E> {
 	
 	/**
 	 * Remove an element
+	 * Big O = o(n)
+	 *
 	 * */
 	public E remove(final int index) {
 		final E oldELement = get(index);
@@ -66,7 +69,19 @@ public class Scenario01<E> {
 		if (this.capacity > DEFAULT_CAPACITY && size * 4 <= this.capacity) {
 			this.objects = Arrays.copyOf(this.objects,newCapacity(this.capacity / 2));
 		}
+	      return oldELement;
 	}
+	
+	private void fastRemove(final Object[] elements,final int index) {
+		final int newSize = this.size - 1;
+		if (newSize > index) {
+			System.arraycopy(elements, index + 1, elements, index,newSize - index);
+
+		}
+
+		elements[this.size = newSize] = null;
+	}
+
 	/**
 	 * new Capacity values
 	 *
@@ -75,6 +90,4 @@ public class Scenario01<E> {
 		this.capacity = capacity;
 		return this.capacity;
 	}
-
-
 }
