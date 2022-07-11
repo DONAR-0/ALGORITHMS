@@ -57,16 +57,16 @@ public class Scenario02 extends Node {
 
 	/**
 	* Insert a new node at a specified position of the list
-	*
+	*  
 	* @param data data to be stored in a new node
 	* @param position position at which a new node is to be inserted
 	*/
 	public void insertNth(int data, int position) {
 		checkBounds(position, 0, size);
 		Node newNode = new Node(data);
-		if (head == null) {
+		if (this.head == null) {
 			/**The list is empty */
-			head = newNode;
+			this.head = newNode;
 			size++;
 			return;
 		}
@@ -146,11 +146,104 @@ public class Scenario02 extends Node {
 		return false;
 	}
 
+	/***************************************************************************************************/
+	/**
+	* Swap Nodes on the bases of values
+	* @param valueA
+	* @param valueB
+	*/
+	public void swapNodes(int valueA,int valueB) {
+		if (valueA == valueB) {
+			return;
+		}
+
+		Node previousA = null, currentA = head;
+		while (currentA != null && currentA.dataInTheNode != valueA) {
+			previousA = currentA;
+			currentA = currentA.nextNode;
+		}
+
+		Node previousB = null, currentB = head;
+		while (currentB != null && currentA.dataInTheNode != valueB) {
+			previousB = currentB;
+			currentB = currentB.nextNode;
+		}
+		/** if either of 'a' or 'b' is not present, then return*/ 
+		if (currentA == null || currentB == null) {
+			return;
+		}
+
+		// if 'a' is not head of node of the list
+		if (previousA != null) {
+			previousA.nextNode = currentB;
+		} else {
+			head = currentB;
+		}
+	}
+	
+	/*********************************************************************************/
+	/**
+	* Reverse the list 
+	* - First FInd the prevNode
+	* - Once you have prev node and than assign the values 
+	*   to the prvious one.
+	*
+	* @param node
+	* @return
+	*/
+	public Node reverseList(Node node) {
+		Node prevNode = head;
+		while (prevNode.nextNode != null) {
+			prevNode = prevNode.nextNode;
+		}
+		Node prev = null,curr = node, next;
+		while (curr != null) {
+			next = curr.nextNode;
+			curr.nextNode = prev;
+			prev = curr;
+			curr = next;
+		}
+		prevNode.nextNode = prev;
+		return head;
+	}
+	
+	/*************************************************************************************/
+	
+	/**
+	* Print the linked list from the head list
+	* @param node head of the node
+	*/
+	public void print(Node node) {
+		Node temp = head;
+		while (temp != null && temp.nextNode != null) {
+			System.out.print(temp.dataInTheNode + "->");
+			temp = temp.nextNode;
+		}
+		if (temp != null) {
+			System.out.print(temp.dataInTheNode);
+			System.out.println();
+		}
+	}
+	
+	/**
+	* Get Head for reverseList operations
+	*
+	* @return {@link Node} Head
+	*/
+	public Node getHead() {
+		return this.head;
+	}
+
+	/**
+	* Get value from the head list for the check
+	*
+	* @return value of the head
+	*/
 	public int getHeadValue(){
 		if (size == 0) {
 			throw new IllegalAccessError("No Data is present in the head");
 		}
-		return this.head.dataInTheNode;
+		return getHead().dataInTheNode;
 	}
 
 	/**
