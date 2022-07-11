@@ -192,18 +192,6 @@ public class Scenario02 extends Node {
 	* @return
 	*/
 	public Node reverseList(Node node) {
-		Node prevNode = head;
-		while (prevNode.nextNode != null) {
-			prevNode = prevNode.nextNode;
-		}
-		Node prev = null,curr = node, next;
-		while (curr != null) {
-			next = curr.nextNode;
-			curr.nextNode = prev;
-			prev = curr;
-			curr = next;
-		}
-		prevNode.nextNode = prev;
 		return head;
 	}
 	
@@ -224,7 +212,23 @@ public class Scenario02 extends Node {
 			System.out.println();
 		}
 	}
-	
+
+ 	/*************************************************************************/
+	/**
+	 * clear all nodes in the list
+	 *
+	 * */
+	public void clear() {
+		Node curr = head;
+		while (curr != null) {
+			Node prev = curr;
+			curr = curr.nextNode;
+			prev = null;
+		}
+		head = null;
+		size = 0;
+	}
+
 	/**
 	* Get Head for reverseList operations
 	*

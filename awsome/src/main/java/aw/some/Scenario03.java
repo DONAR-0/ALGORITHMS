@@ -15,12 +15,23 @@ public class Scenario03 {
 	* @param value
 	* @return
 	*/
-	public boolean findValueInSortedMatrixNLOGN(int[][] matrix,int value) {
+	public boolean findValueInSortedMatrixinOneLoop(int[][] matrix,int length,int value) {
 		//TODO:
 		//1. map out the values
 		//2. location
-		for (int i = 0; i < matrix.length; i++) {
-			
+		// value % matrix = x
+		// value % matrix[i] = value
+		int i = 0,j = length - 1;
+		while (i < length && j >= 0) {
+			if (matrix[i][j] == value) {
+				System.out.println("Element is found at "+ i +" " +j);
+				return true;
+			}
+			if (matrix[i][j] > value) {
+				j--;
+			} else {
+				i++;
+			}
 		}
 		return false;	
 	}
