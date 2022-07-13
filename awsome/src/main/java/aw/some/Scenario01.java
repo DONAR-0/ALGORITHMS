@@ -90,4 +90,5 @@ public class Scenario01<E> {
 		this.capacity = capacity;
 		return this.capacity;
 	}
+
 }

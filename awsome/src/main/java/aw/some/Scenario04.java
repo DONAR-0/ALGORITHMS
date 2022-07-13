@@ -55,7 +55,14 @@ public class Scenario04 {
 		}
 		head = current;
 	}
-
+	
+	/**
+	* Get Head for reverse list
+	* @return
+	*/
+	public ListNode getHead() {
+		return this.head;
+	}
 	static class ListNode {
 		int dataInTheNode;
 		ListNode nextNode;

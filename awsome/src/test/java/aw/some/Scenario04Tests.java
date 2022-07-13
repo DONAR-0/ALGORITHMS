@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
 /**
 * Scenario04Tests
 */
@@ -32,6 +35,7 @@ public class Scenario04Tests {
 		scenario04.reverse();
 		LOGGER.info("Printing Linked list after reverse");
 		scenario04.print();
+		assertThat("Check value in head after reverse",scenario04.getHead().dataInTheNode,is(11));
 	}
 
 }
