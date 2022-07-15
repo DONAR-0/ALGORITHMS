@@ -60,4 +60,22 @@ public class Scenario03Tests {
 		LOGGER.info("Only One While loop with Different values in every row");
 		assertThat("happy check for log n", scenario03.findValueInSortedMatrixinOneLoop(matrix, 4, 25),is(true));
 	}
+	
+	@Test
+	@DisplayName("TEST_4: Different values in every row")
+	public void scenario03_Test_04() {
+		Scenario03 scenario03 = new Scenario03();
+		int[][] matrix = {
+			{0,1,2,3,5,5,5,6,6,1,5,4,1,8,9,4,5,8,4,6,1,8,4,1,8,4,8,4,8},
+			{9,10,11,12,54,81,57,38,79,93,20,54,80,48,04,48,44,04,44,48},
+		};
+		LOGGER.info("Remove Duplicates from array");
+		LOGGER.info("{}",matrix[0]);
+		LOGGER.info("{}",scenario03.removeDuplicates(matrix[0]));
+		LOGGER.info("{}",matrix[1]);
+		scenario03.removeDuplicates(scenario03.removeDuplicates(matrix[1]));
+		LOGGER.info("{}",matrix[1]);	
+	}
+
+
 }

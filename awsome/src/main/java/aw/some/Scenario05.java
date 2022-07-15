@@ -138,6 +138,11 @@ public class Scenario05 {
 		throw new RuntimeException(string +" does not have non Repeating char");
 	}
 	
+	/**
+	* 
+	* @param string
+	* @return
+	*/
 	public char getFirstNonRepeatingCharacterO(String string) {
 		Set<Character> repeatinCharacters = new HashSet<>();
 		List<Character> nonReapetingCharacters = new ArrayList<>();
@@ -154,5 +159,30 @@ public class Scenario05 {
 		}
 		return nonReapetingCharacters.get(0);
 	}
+	
+	/**********************************************************************/
+	/************************Reverse String********************************/
+	/**********************************************************************/
+	
+	/**
+	* Reverse String using recusrions
+	* @param word on String
+	* @return reversed String
+	*/
+	public String reverseString(String word) {
+		//terminating value
+		if (word.length() < 2) {
+			return word;
+		}
+		return reverseString(word.substring(1)) + word.charAt(0);
+	}
 
+	private void permutation(String permutation,String word) {
+		if (word.isEmpty()) {
+			throw new IllegalArgumentException("arguments should not be empty");
+		}
+		for (int i = 0; i <word.length(); i++) {
+			permutation(permutation+word.charAt(i), word.subSequence(0,i) + word.substring(i+1,word.length()));
+		}
+	}
 }

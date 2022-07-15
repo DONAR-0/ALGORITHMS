@@ -4,7 +4,5 @@
 ###### [Scenario02](/awsome/src/main/java/com/aw/some/Scenario02.java) :  Singly Linked list
 ###### [Scenario03](/awsome/src/main/java/com/aw/some/Scenario03.java) :  binary search in matrix
 ###### [Scenario04](/awsome/src/main/java/com/aw/some/Scenario04.java) :  Easy Singly Linked list
-
-
-
+###### [Scenario05](/awsome/src/main/java/com/aw/some/Scenario05.java) :  Common String problems
 

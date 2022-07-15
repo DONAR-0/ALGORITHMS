@@ -1,5 +1,6 @@
 package aw.some;
 
+import java.util.*;
 
 /**
 * Searching in sorted 2 dimmesion matrix
@@ -8,6 +9,10 @@ package aw.some;
 **/
 public class Scenario03 {
 	
+	/************************************************************************************/
+	/****************************** Find Value in matrix *********************************/
+	/************************************************************************************/
+
 	/**
 	* Finding value in a sorted matrix
 	*
@@ -16,7 +21,7 @@ public class Scenario03 {
 	* @return
 	*/
 	public boolean findValueInSortedMatrixinOneLoop(int[][] matrix,int length,int value) {
-		//TODO:
+		// what to do
 		//1. map out the values
 		//2. location
 		// value % matrix = x
@@ -53,6 +58,10 @@ public class Scenario03 {
 		}
 		return false;
 	}
+	
+	/************************************************************************************/
+	/****************************** Print Values in matrix ******************************/
+	/************************************************************************************/
 
 	public void printMatrix(int[][] matrix) {
 		for (int i = 0; i < matrix.length; i++) {
@@ -71,9 +80,30 @@ public class Scenario03 {
 				System.out.print(matrix[i][j]+" ");
 				j++;
 			}
-				j = 0;
-				i++;
-				System.out.println();
+		  j = 0;
+		  i++;
+		  System.out.println();
 		}
 	}
+
+	/************************************************************************************/
+	/****************************** Remove Duplicates ******************************/
+	/************************************************************************************/
+	
+	public int[] removeDuplicates(int[] numbersWithDuplicates) {
+		Arrays.sort(numbersWithDuplicates);
+		int[] result = new int[numbersWithDuplicates.length];
+		int previous = numbersWithDuplicates[0];
+		result[0] = previous;
+		
+		for (int i = 1; i < numbersWithDuplicates.length; i++) {
+			int ch = numbersWithDuplicates[i];
+			if (previous != ch) {
+				result[i] = ch;
+			}
+			previous = ch;
+		}
+		return result;
+	}
+
 }
