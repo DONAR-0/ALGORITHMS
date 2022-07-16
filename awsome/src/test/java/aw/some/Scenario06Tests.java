@@ -4,6 +4,7 @@ package aw.some;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.hamcrest.Matchers.*;
 import static org.hamcrest.collection.IsMapContaining.hasEntry;
 
 import org.hamcrest.core.AllOf;
@@ -13,8 +14,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.aMapWithSize;
-import static org.hamcrest.Matchers.contains;
 
 /**
 * Scenario06Tests
@@ -54,8 +53,7 @@ public class Scenario06Tests {
 		pairMap = scenario06.printPairs(matrix[0],7);
 		LOGGER.info("{}",matrix[1]);
 		scenario06.printPairs(matrix[1],7);
-		assertThat("First Happy Check",pairMap,AllOf.allOf(hasSize(2),
-								hasEntry(Map.entry(3, 4)));
+		assertThat("Happy Check",pairMap,hasEntry(4,3));
 	}
 
 	@Test
