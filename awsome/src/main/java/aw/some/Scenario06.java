@@ -45,7 +45,7 @@ public class Scenario06 {
 			for (int j = i + 1; j < array.length; j++) {
 				int second = array[j];
 				if ((first + second) == sum) {
-					System.out.printf("Pair Found (%d,%d) %n",first,second);
+					//System.out.printf("Pair Found (%d,%d) %n",first,second);
 					pairMap.put(first,second);
 				}
 			}
@@ -62,19 +62,22 @@ public class Scenario06 {
 	* because behind the scene it uses hashmap
 	*
 	* */
-	public void printPairsUsingSet(int[] array,int sum) {
+	public HashMap<Integer,Integer> printPairsUsingSet(int[] array,int sum) {
 		if (array.length < 2) {
 			throw new IllegalArgumentException("array size should be greater than 2");
 		}
 		Set<Integer> set= new HashSet<>(array.length);
+		HashMap<Integer,Integer> hashMap = new HashMap<>();
 		for (int integer : array) {
 			int target = sum - integer;
 			if (!set.contains(target)) {
 				set.add(integer);
 			} else {
-				System.out.printf("(%d,%d) %n",integer,target);
+				//System.out.printf("(%d,%d) %n",integer,target);
+				hashMap.put(integer,target);
 			}
 		}
+		return hashMap;
 	}
 
 	public void printPairsLoSpaceComplexity(int[] numbers,int sum) {

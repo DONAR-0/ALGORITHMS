@@ -106,4 +106,52 @@ public class Scenario03 {
 		return result;
 	}
 
+
+	/************************************************************************************/
+	/****************************** Transpose a matrix    ******************************/
+	/************************************************************************************/
+	
+	/**
+	* Transpose a matrix 
+	*
+	* @param matrix
+	* @return
+	*/
+	public int[][] transposeAMatrix(int[][] matrix) {
+		int[][] transposedMatrix = new int[matrix.length][matrix.length];
+
+		for (int i = 0; i < transposedMatrix.length; i++) {
+			for (int j = 0; j < transposedMatrix[i].length; j++) {
+				transposedMatrix[j][i] = matrix[i][j];
+			}	
+		}
+		return transposedMatrix;
+	}
+
+	
+	/************************************************************************************/
+	/****************************** Add and Subtract a matrix    *************************/
+	/************************************************************************************/
+	
+	/**
+	* Add or subtract
+	*
+	* @param add(1)OrSubtract(0) 
+	* @param a
+	* @param b
+	* @return
+	*/
+	public int[][] addOrSubtractAMatrix(int addOrSubtract,int[][] a,int[][] b) {
+		int[][] resultMatrix = new int[a.length][a.length];
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a.length; j++) {
+				
+				resultMatrix[i][j] = addOrSubtract == 0 ? a[i][j] - b[i][j] : a[i][j] + b[i][j];
+			}
+		}
+		return resultMatrix;
+	}
 }
+
+
+

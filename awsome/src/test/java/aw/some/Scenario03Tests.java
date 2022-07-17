@@ -77,5 +77,45 @@ public class Scenario03Tests {
 		LOGGER.info("{}",matrix[1]);	
 	}
 
+	@Test
+	@DisplayName("TEST_5: transpose a matrix")
+	public void scenario03_Test_05() {
+		Scenario03 scenario03 = new Scenario03();
+		int[][] matrix = {
+			{0,1,2,3},
+			{9,10,11,12},
+			{21,22,23,25},
+			{27,30,31,32}
+		};
+		LOGGER.info("Matrix Check");
+		scenario03.printMatrix(matrix);
+		scenario03.printMatrix(scenario03.transposeAMatrix(matrix));
+		//assertThat("matrxi check", ,is(true));
+	}
 
+
+	@Test
+	@DisplayName("TEST_5: transpose a matrix")
+	public void scenario03_Test_06() {
+		Scenario03 scenario03 = new Scenario03();
+		int[][] matrixA = {
+			{0,1,2,3},
+			{9,10,11,12},
+			{21,22,23,25},
+			{27,30,31,32}
+		};
+
+
+		int[][] matrixB = {
+			{0,1,2,3},
+			{9,10,11,12},
+			{21,22,23,25},
+			{27,30,31,32}
+		};
+		LOGGER.info("Matrix Check");
+		scenario03.printMatrix(matrixA);
+		scenario03.printMatrix(scenario03.addOrSubtractAMatrix(0, matrixA, matrixB));
+		//assertThat("matrxi check", ,is(true));
+	}
+	
 }

@@ -47,13 +47,18 @@ public class Scenario06Tests {
 			{2,4,3,5,7,8,9},
 			{2,4,3,5,6,-2,4,7,8,9},
 		};
-		HashMap<Integer,Integer> pairMap = new HashMap<>();
+		HashMap<Integer,Integer> pairMap = scenario06.printPairs(matrix[0], 7);
 		LOGGER.info("Find Sum Pairs");
 		LOGGER.info("{}",matrix[0]);
-		pairMap = scenario06.printPairs(matrix[0],7);
+		LOGGER.info("Find Sum Pairs");
+		HashMap<Integer,Integer> pairMap2 = scenario06.printPairs(matrix[1], 7);
 		LOGGER.info("{}",matrix[1]);
-		scenario06.printPairs(matrix[1],7);
-		assertThat("Happy Check",pairMap,hasEntry(4,3));
+		assertThat("Entry Check",pairMap,hasEntry(4,3));
+		assertThat("Entry Check",pairMap,hasEntry(2,5));
+		assertThat("Entry Check",pairMap2,hasEntry(4,3));
+		assertThat("Entry Check",pairMap2,hasEntry(2,5));
+		assertThat("Entry Check",pairMap2,hasEntry(3,4));
+		assertThat("Entry Check",pairMap2,hasEntry(-2,9));
 	}
 
 	@Test
@@ -65,8 +70,8 @@ public class Scenario06Tests {
 			{2,4,3,5,6,-2,4,7,8,9},
 		};
 		LOGGER.info("Find Sum pairs");
-		//LOGGER.info("{}",matrix[0]);
-		//scenario06.printPairsUsingSet(matrix[0],7);
+		LOGGER.info("{}",matrix[0]);
+		scenario06.printPairsUsingSet(matrix[0],7);
 		LOGGER.info("{}",matrix[1]);
 		scenario06.printPairsUsingSet(matrix[1],7);
 
