@@ -50,7 +50,7 @@ public class Scenario02Tests{
 	}
 
 	@Test
-	@DisplayName("Get Head Value")
+	@DisplayName("TEST_4:Get Head Value")
 	public void scenario02_Test_04(){
 		Scenario02 scenario02 = new Scenario02();
 		scenario02.insert(1);
@@ -59,5 +59,24 @@ public class Scenario02Tests{
 		scenario02.insert(4);
 		LOGGER.info("Head Check");
 		scenario02.print(scenario02.getHead());
+	}
+
+
+	@Test
+	@DisplayName("TEST_5: Get Middle Values")
+	public void scenario02_Test_05(){
+		Scenario02 scenario02 = new Scenario02();
+		scenario02.insert(1);
+		scenario02.insert(2);
+		scenario02.insert(3);
+		scenario02.insert(4);
+		scenario02.insert(5);
+		scenario02.insert(6);
+		scenario02.insert(7);
+		scenario02.insert(8);
+		scenario02.insert(9);
+
+		LOGGER.info("Middle Check");
+		scenario02.findMiddleElement();
 	}
 }

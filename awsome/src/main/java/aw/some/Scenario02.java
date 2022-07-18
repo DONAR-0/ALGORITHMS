@@ -225,6 +225,7 @@ public class Scenario02 extends Node {
 		}
 	}
 	
+	/*************************************************************************************/
 	/**
 	* Get Head for reverseList operations
 	*
@@ -234,6 +235,7 @@ public class Scenario02 extends Node {
 		return this.head;
 	}
 
+	/*************************************************************************************/
 	/**
 	* Get value from the head list for the check
 	*
@@ -246,6 +248,8 @@ public class Scenario02 extends Node {
 		return getHead().dataInTheNode;
 	}
 
+
+	/*************************************************************************************/
 	/**
 	*  A simple check for the bounds
 	*
@@ -257,6 +261,30 @@ public class Scenario02 extends Node {
 		if (position > high || position < low) {
 			throw new IndexOutOfBoundsException(position + "");
 		}
+	}
+
+	/*************************************************************************************/
+	
+	
+	public void findMiddleElement(){
+		Node current = head;
+		int length = 0;
+
+		Node middle = head;
+		while (current.nextNode != null) {
+			length++;
+			if (length %2 == 0) {
+				System.out.println("middle"+middle.dataInTheNode);
+				middle = middle.nextNode;
+			}
+			current = current.nextNode;
+		}
+		if (length %2 ==1) {
+			middle = middle.nextNode;
+		}
+
+		System.out.println("The Lenght of the list is "+length);
+		System.out.println("The middle of the list is "+middle.dataInTheNode);
 	}
 }
 
