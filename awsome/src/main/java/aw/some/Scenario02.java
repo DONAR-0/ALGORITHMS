@@ -206,7 +206,7 @@ public class Scenario02 extends Node {
 		prevNode.nextNode = prev;
 		return head;
 	}
-	
+
 	/*************************************************************************************/
 	
 	/**
@@ -265,7 +265,10 @@ public class Scenario02 extends Node {
 
 	/*************************************************************************************/
 	
-	
+	/**
+	 * Find Middle Element
+	 * Good way
+	 */
 	public void findMiddleElement(){
 		Node current = head;
 		int length = 0;
@@ -286,6 +289,25 @@ public class Scenario02 extends Node {
 		System.out.println("The Lenght of the list is "+length);
 		System.out.println("The middle of the list is "+middle.dataInTheNode);
 	}
+
+	/*************************************************************************************/
+	
+	/**
+	*
+	* */
+	public boolean isCyclic() {
+		Node fast = head;
+		Node slow = head;
+		while(fast != null && fast.nextNode != null) {
+			fast = fast.nextNode.nextNode;
+			slow = slow.nextNode;
+			if (fast == slow) { 
+				return true;
+			}
+		}
+		return false;
+	}
+
 }
 
 /**
