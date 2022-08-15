@@ -1,9 +1,6 @@
 package aw.some;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,13 +41,38 @@ public class Scenario10 {
 		return vList;
 	}
 
-//	public List<List<Integer>> threeSumOne(int[] nums) {
-//		Arrays.sort(nums);
-//		List<List<Integer>> ans = new ArrayList<>();
-
-
-//	}
-	
+	public List<List<Integer>> threeSumOne(int[] nums) {
+		Arrays.sort(nums);
+		List<List<Integer>> ans = new ArrayList<>();
+		Set<String> seen = new HashSet<>();
+		for (int i = 0; i < nums.length - 2; i++) {
+			int num = -1 * nums[i];
+			int left = i + 1;
+			int right = nums.length - 1;
+			while (left < right) {
+				int sum = nums[left] + nums[right];
+				if (num == sum) {
+					List<Integer> list = new ArrayList<>();
+					list.add(nums[i]);
+					list.add(nums[left]);
+					list.add(nums[right]);
+					if (!seen.contains("" + nums[i] + nums[left] + nums[right]))
+						ans.add(list);
+					if (nums[i] == nums[right] && nums[i] == nums[left]) {
+						return ans;
+					}
+					seen.add("" + nums[i] + nums[left] + nums[right]);
+					left++;
+					right--;
+				} else if (num < sum) {
+					left++;
+				} else {
+					right--;
+				}
+			}
+		}
+		return ans;
+	}
 
 }
 
