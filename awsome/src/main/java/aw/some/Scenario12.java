@@ -12,4 +12,10 @@ public class Scenario12 {
         return number * factorialRecursion(number - 1);
     }
 
+    public int fibonacciRecusrion(int number) {
+        if (number <= 1) {
+            return 1;
+        }
+        return fibonacciRecusrion(number - 1) + fibonacciRecusrion(number - 2);
+    }
 }

@@ -23,4 +23,23 @@ public class Scenario12Tests {
         Integer actualValue = scenario12.factorialRecursion(inputValue);
         assertThat(actualValue,is(equalTo(expectedValue)));
     }
+
+
+    @Test
+    @DisplayName("scenario12_Test_02")
+    public void scenario12_Test_02() {
+        Scenario12 scenario12 = new Scenario12();
+        int inputValue = 8;
+        // 0 + 1
+        // 1 + 1
+        // 1 + 2
+        // 3 + 2
+        // 5 + 3
+        // 8 + 5
+        // 13 + 8
+        // 21 + 13
+        Integer expectedValue = 34;
+        Integer actualValue = scenario12.fibonacciRecusrion(inputValue);
+        assertThat(actualValue,is(equalTo(expectedValue)));
+    }
 }
