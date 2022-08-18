@@ -24,9 +24,9 @@ public class Scenario10Tests {
 		List<List<Integer>> valueList = scenario10.threeSum(nums);
 
 		List<List<Integer>> expectList = new ArrayList<>();
-		expectList.add(new ArrayList(Arrays.asList(-1,-1,2)));
-		expectList.add(new ArrayList( Arrays.asList(-1,-1,2)));
-		expectList.add(new ArrayList( Arrays.asList(-1,0,-1)));
+		expectList.add(new ArrayList(Arrays.asList(-1,0,1)));
+		expectList.add(new ArrayList( Arrays.asList(-1,2,-1)));
+		expectList.add(new ArrayList( Arrays.asList(0,1,-1)));
 		assertThat(valueList,Is.is(equalTo(expectList)));
 	}
 }
