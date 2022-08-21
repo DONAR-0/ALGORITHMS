@@ -82,7 +82,7 @@ public class Scenario12Tests {
     }
 
     @Test
-    @DisplayName("scenario12_Test_05")
+    @DisplayName("scenario12_Test_06")
     public void scenario12_Test_06() {
         Scenario12 scenario12 = new Scenario12();
         int inputValue = 7;
@@ -91,4 +91,21 @@ public class Scenario12Tests {
         scenario12.functionRecursionLoop(inputValue);
 //        assertThat(actualValue,is(equalTo(expectedValue)));
     }
+
+    @Test
+    @DisplayName("scenario12_Test_07")
+    public void scenario12_Test_07() {
+    
+        Scenario12 scenario12 = new Scenario12();
+        int inputValue = 5;
+	int inputValue2 = 2;
+        Integer expectedValue = 25;
+        Integer actualValue = scenario12.powerRecursion(inputValue,inputValue2);
+        assertThat(actualValue,is(equalTo(expectedValue)));
+	inputValue = 6;
+	inputValue2 = 5;
+        assertThat(actualValue,is(equalTo(expectedValue)));
+    
+    }
+    
 }

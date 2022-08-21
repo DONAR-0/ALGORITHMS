@@ -58,10 +58,24 @@ public class Scenario12 {
     public void functionRecursionLoop(int n){
 
         int i = 0;
-        if (n > 1) functionRecursionLoop(n -1);
+        if (n > 1) {
+	    functionRecursionLoop(n -1);
+	}
         for (int j = 0; j < n; j++) {
             System.out.print("*");
         }
     }
 
+    /**
+     *
+     * */
+    public int powerRecursion(int a,int b) {
+	if(b == 0){
+		return 1;
+	}
+	if (b %2 == 0) {
+		return powerRecursion(a * a,b/2);	
+	}
+	return powerRecursion(a * a,b / 2) * a;
+    }
 }
