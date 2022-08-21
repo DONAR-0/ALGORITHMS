@@ -11,7 +11,6 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 /**
  * Scenario 12 Tests
- *
  */
 @DisplayName("Recursion Tests")
 public class Scenario12Tests {
@@ -25,7 +24,7 @@ public class Scenario12Tests {
         int inputValue = 5;
         Integer expectedValue = 120;
         Integer actualValue = scenario12.factorialRecursion(inputValue);
-        assertThat(actualValue,is(equalTo(expectedValue)));
+        assertThat(actualValue, is(equalTo(expectedValue)));
     }
 
 
@@ -44,7 +43,7 @@ public class Scenario12Tests {
         // 21 + 13
         Integer expectedValue = 34;
         Integer actualValue = scenario12.fibonacciRecusrion(inputValue);
-        assertThat(actualValue,is(equalTo(expectedValue)));
+        assertThat(actualValue, is(equalTo(expectedValue)));
     }
 
     @Test
@@ -53,8 +52,8 @@ public class Scenario12Tests {
         Scenario12 scenario12 = new Scenario12();
         int inputValue = 5;
         Integer expectedValue = 20;
-        Integer actualValue = scenario12.recursionFunction(inputValue,5);
-        assertThat(actualValue,is(equalTo(expectedValue)));
+        Integer actualValue = scenario12.recursionFunction(inputValue, 5);
+        assertThat(actualValue, is(equalTo(expectedValue)));
     }
 
     @Test
@@ -64,7 +63,7 @@ public class Scenario12Tests {
         int inputValue = 5;
         Integer expectedValue = 2;
         Integer actualValue = scenario12.recursionFunctionTwo(inputValue);
-        assertThat(actualValue,is(equalTo(expectedValue)));
+        assertThat(actualValue, is(equalTo(expectedValue)));
     }
 
     @Test
@@ -73,12 +72,12 @@ public class Scenario12Tests {
         Scenario12 scenario12 = new Scenario12();
         int inputValue = 7;
         String expectedValue = "111";
-        String actualValue = scenario12.recursionDecimalToBinary(inputValue,new StringBuilder());
-        assertThat(actualValue,is(equalTo(expectedValue)));
+        String actualValue = scenario12.recursionDecimalToBinary(inputValue, new StringBuilder());
+        assertThat(actualValue, is(equalTo(expectedValue)));
         inputValue = 8;
         expectedValue = "0001";
-        actualValue = scenario12.recursionDecimalToBinary(inputValue,new StringBuilder());
-        assertThat(actualValue,is(equalTo(expectedValue)));
+        actualValue = scenario12.recursionDecimalToBinary(inputValue, new StringBuilder());
+        assertThat(actualValue, is(equalTo(expectedValue)));
     }
 
     @Test
@@ -95,17 +94,19 @@ public class Scenario12Tests {
     @Test
     @DisplayName("scenario12_Test_07")
     public void scenario12_Test_07() {
-    
+
         Scenario12 scenario12 = new Scenario12();
         int inputValue = 5;
-	int inputValue2 = 2;
+        int inputValue2 = 2;
         Integer expectedValue = 25;
-        Integer actualValue = scenario12.powerRecursion(inputValue,inputValue2);
-        assertThat(actualValue,is(equalTo(expectedValue)));
-	inputValue = 6;
-	inputValue2 = 5;
-        assertThat(actualValue,is(equalTo(expectedValue)));
-    
+        Integer actualValue = scenario12.powerRecursion(inputValue, inputValue2);
+        assertThat(actualValue, is(equalTo(expectedValue)));
+        inputValue = 6;
+        inputValue2 = 5;
+        expectedValue = 7776;
+        actualValue = scenario12.powerRecursion(inputValue,inputValue2);
+        assertThat(actualValue, is(equalTo(expectedValue)));
+
     }
-    
+
 }
