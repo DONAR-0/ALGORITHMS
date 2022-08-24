@@ -17,8 +17,7 @@ public class Scenario14 {
 	}
 
 	public Integer averageValueOfArray1(Integer[] array){
-		return Arrays.asList(array)
-		.stream()
+		return Arrays.stream(array)
 		.mapToInt(i -> i)
 		.sum() / (array.length - 1);
 	}

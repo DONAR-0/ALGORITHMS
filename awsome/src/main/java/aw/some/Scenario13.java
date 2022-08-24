@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
  * Scenario13
- * Binary search in sorted integr List
+ * Binary search in sorted integer List
  *
  */
 public class Scenario13 {

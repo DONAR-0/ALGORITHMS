@@ -98,13 +98,13 @@ public class Scenario12Tests {
         Scenario12 scenario12 = new Scenario12();
         int inputValue = 5;
         int inputValue2 = 2;
-        Integer expectedValue = 25;
-        Integer actualValue = scenario12.powerRecursion(inputValue, inputValue2);
+        int expectedValue = 25;
+        int actualValue = scenario12.powerRecursion(inputValue, inputValue2);
         assertThat(actualValue, is(equalTo(expectedValue)));
         inputValue = 6;
         inputValue2 = 5;
         expectedValue = 7776;
-        actualValue = scenario12.powerRecursion(inputValue,inputValue2);
+        actualValue = scenario12.powerRecursionSimpler(inputValue,inputValue2);
         assertThat(actualValue, is(equalTo(expectedValue)));
 
     }
