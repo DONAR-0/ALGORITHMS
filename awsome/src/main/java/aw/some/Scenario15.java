@@ -17,4 +17,8 @@ public class Scenario15 {
 			a[j] = swap;
 		}
 	}
+	
+	public static void main(String... args) {
+		
+	}
 }
