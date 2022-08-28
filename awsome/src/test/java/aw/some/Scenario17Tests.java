@@ -36,6 +36,18 @@ public class Scenario17Tests {
 		LOG.info("Scenario17 Values");
 		String inputValue = "()[]";
 		scenario17.isValid(inputValue);
-		assertThat(scenario17.isValid(inputValue),is(equalTo(false)));
+		assertThat(scenario17.isValid(inputValue),is(equalTo(true)));
 	}
+
+	@Test
+	@DisplayName("scenario17_Test_03")
+	public void scenario17_Test_03() {
+		Scenario17 scenario17 = new Scenario17();
+		LOG.info("Scenario17 Values");
+		String inputValue = "({})[]";
+
+		//scenario17.isValid(inputValue);
+		assertThat(scenario17.isValidOne(inputValue),is(equalTo(true)));
+	}
+
 }
