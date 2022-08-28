@@ -67,6 +67,23 @@ public class Scenario16 {
 
 	}
 
+	public ListNode removeNthFromEndOne(ListNode head,int n){
+		ListNode currentNode = head;
+		ListNode firstNode = currentNode.next;
+		while ( n-- > 0) {
+			firstNode = firstNode.next;
+		}
+		ListNode secondNode = currentNode;
+
+		while (firstNode != null) {
+			secondNode = secondNode.next;
+			firstNode = firstNode.next;
+		}
+
+		secondNode.next = secondNode.next.next;
+		return currentNode.next;
+	}
+
 	static class ListNode{
 		int val;
 		ListNode next;

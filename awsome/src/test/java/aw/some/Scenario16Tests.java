@@ -59,5 +59,21 @@ public class Scenario16Tests {
 		LOG.info("{}",scenario16.printLinkNode(scenario16.removeNthFromEnd(head,4)));
 
 	}
-	
+
+
+	@Test
+	@DisplayName("scenario16_Test_04")
+	public void scenario16_Test_04() {
+		//Print value in Node
+		Scenario16 scenario16 = new Scenario16();
+		Scenario16.ListNode next4 = new Scenario16.ListNode(5);
+		Scenario16.ListNode next3 = new Scenario16.ListNode(4,next4);
+		Scenario16.ListNode next2 = new Scenario16.ListNode(3,next3);
+		Scenario16.ListNode next = new Scenario16.ListNode(2,next2);
+		Scenario16.ListNode head = new Scenario16.ListNode(1,next);
+		LOG.info("{}",scenario16.printLinkNode(head));
+//		scenario16.removeNthFromEnd(head, 5);
+		LOG.info("{}",scenario16.printLinkNode(scenario16.removeNthFromEndOne(head,3)));
+
+	}
 }
