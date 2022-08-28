@@ -18,17 +18,24 @@ public class Scenario16 {
 			size = size + 1;
 			currentNode = currentNode.next;	
 		}
+		currentNode = head;
 		int fromStart = (size - n);
 		int counter = 0;
-		while (currentNode != null) {
-			if (counter < fromStart) {
-				counter = counter + 1;
-				previousNode = currentNode;
-			}
-			System.out.println(previousNode.val);
-			currentNode = currentNode.next;
+		if (fromStart < 0) {
+			throw new IllegalArgumentException("size should be less than value");
 		}
-		previousNode.next = previousNode.next.next;
+		if (fromStart == 0) {
+			head = head.next;
+		} else {
+			while (currentNode != null) {
+				if (counter < fromStart) {
+					counter = counter + 1;
+					previousNode = currentNode;
+				}
+				currentNode = currentNode.next;
+			}
+			previousNode.next = previousNode.next.next;
+		}
 		return head;
 	}
 

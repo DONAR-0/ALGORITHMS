@@ -55,8 +55,8 @@ public class Scenario16Tests {
 		Scenario16.ListNode next = new Scenario16.ListNode(2,next2);
 		Scenario16.ListNode head = new Scenario16.ListNode(1,next);
 		LOG.info("{}",scenario16.printLinkNode(head));
-		scenario16.removeNthFromEnd(head, 2);
-		LOG.info("{}",scenario16.printLinkNode(head));
+//		scenario16.removeNthFromEnd(head, 5);
+		LOG.info("{}",scenario16.printLinkNode(scenario16.removeNthFromEnd(head,4)));
 
 	}
 	
