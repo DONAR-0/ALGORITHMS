@@ -27,7 +27,7 @@ public class Scenario17 {
 		} else {
 			for (int i = 0; i < s.length(); i = i + 2) {
 				char key = s.charAt(i);
-				char value = s.charAt(i);
+				char value = s.charAt(i+1);
 				if(characterCharacterMap.get(key) == value) {
 					continue;
 				} else {
