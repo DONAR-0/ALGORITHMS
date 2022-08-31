@@ -7,7 +7,8 @@ import java.util.Arrays;
 */
 public class Scenario19 {
 	private int[] a;
-	
+
+	public Scenario19() {}
 	/**
 	* Initialize a set of integers specified by integer arrays
 	* @param keys the arrays of integers
