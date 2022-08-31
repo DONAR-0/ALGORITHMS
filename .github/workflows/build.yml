@@ -23,3 +23,46 @@ jobs:
     - name: Test All Scenario01Tests
       run: echo ==============================  Scenario01Tests ====================================
         \ && cd awsome && mvn test -Dtest="Scenario01Tests"
+    - name: Test All Scenario02Tests
+      run: echo ==============================  Scenario02Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario02Tests"
+    - name: Test All Scenario03Tests
+      run: echo ==============================  Scenario03Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario03Tests"
+
+    - name: Test All Scenario04Tests
+      run: echo ==============================  Scenario04Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario04Tests"
+    - name: Test All Scenario05Tests
+      run: echo ==============================  Scenario05Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario05Tests"
+    - name: Test All Scenario06Tests
+      run: echo ==============================  Scenario06Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario06Tests"
+    - name: Test All Scenario07Tests
+      run: echo ==============================  Scenario07Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario07Tests"
+    - name: Test All Scenario08Tests
+      run: echo ==============================  Scenario08Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario08Tests"
+    - name: Test All Scenario09Tests
+      run: echo ==============================  Scenario09Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario09Tests"
+    - name: Test All Scenario10Tests
+      run: echo ==============================  Scenario10Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario10Tests"
+    - name: Test All Scenario01Tests
+      run: echo ==============================  Scenario11Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario11Tests"
+    - name: Test All Scenario12Tests
+      run: echo ==============================  Scenario12Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario12Tests"
+    - name: Test All Scenario13Tests
+      run: echo ==============================  Scenario13Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario13Tests"
+    - name: Test All Scenario14Tests
+      run: echo ==============================  Scenario14Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario14Tests"
+    - name: Test All Scenario15Tests
+      run: echo ==============================  Scenario15Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario15Tests"
