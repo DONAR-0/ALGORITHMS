@@ -47,5 +47,19 @@ public class Scenario20Tests {
 		double[] zdata = { 6.0, 4.0, 7.0, 5.0};
 		Scenario20 z = new Scenario20(zdata);
 		assertThat(z.toString(),is(equalTo(x.plus(y).toString())));
-	}	
+	}
+	
+
+	@Test
+	@DisplayName("scenario20_Test_03")
+	public void scenario20_Test_03() {
+		double[] xdata = { 1.0, 2.0, 3.0, 4.0};
+		double[] ydata = { 5.0, 2.0, 4.0, 1.0};
+		Scenario20 x = new Scenario20(xdata);
+		Scenario20 y = new Scenario20(ydata);
+		double[] zdata = { 10.0, 20.0, 30.0, 40.0};
+		Scenario20 z = new Scenario20(zdata);
+		assertThat(z.toString(),is(equalTo(x.scale(10).toString())));
+	}
+
 }

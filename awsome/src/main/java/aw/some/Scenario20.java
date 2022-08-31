@@ -142,7 +142,7 @@ public class Scenario20 {
 	* @return the vector whose value is {@code (alpha * this)}
 	* */
 	public Scenario20 scale(double alpha) {
-		Scenario20 scenario20 = new Scenario20();
+		Scenario20 scenario20 = new Scenario20(data);
 		for (int i = 0; i < d; i++) {
 			scenario20.data[i] = alpha * data[i];
 		}
