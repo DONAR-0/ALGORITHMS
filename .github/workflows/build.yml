@@ -19,7 +19,7 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Go To Awsome Directory
-      run: cd awsome
+      run: cd awsome && pwd && ls -la
     - name: Build with maven
       run: mvn clean install
     - name: Test All Scenarios
