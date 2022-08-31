@@ -19,6 +19,6 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Build with maven
-      run: cd awsome && mvn clean install
+      run: cd awsome && mvn clean install -DskipTests
     - name: Test All Scenarios
-      run: mvn test
+      run: cd awsome && mvn test
