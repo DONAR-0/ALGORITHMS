@@ -1,5 +1,5 @@
 #  AWESOME CODE [![Build](https://github.com/DONAR-0/ALGORITHMS/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/DONAR-0/ALGORITHMS/actions/workflows/build.yml)
-## This Repository represents General Coding from Time Spent for Creating a good set of a code.
+## Fundamental Code Practice
 ###### [Scenario01](/awsome/src/main/java/com/aw/some/Scenario01.java) :  Dynamic Array
 ###### [Scenario02](/awsome/src/main/java/com/aw/some/Scenario02.java) :  Singly Linked list
 ###### [Scenario03](/awsome/src/main/java/com/aw/some/Scenario03.java) :  binary search in matrix

@@ -20,5 +20,6 @@ jobs:
         distribution: 'adopt'
     - name: Build with maven
       run: cd awsome && mvn clean install -DskipTests
-    - name: Test All Scenarios
-      run: cd awsome && mvn test
+    - name: Test All Scenario01Tests
+      run: echo ==============================  Scenario01Tests ====================================
+        \ && cd awsome && mvn test -Dtest="Scenario01Tests"
