@@ -1,6 +1,8 @@
 package aw.some;
 
-import static java.lang.String.format;
+import java.util.Arrays;
+import java.util.Objects;
+import java.util.StringJoiner;
 /**
 * Scenario22 : Array values 
 */
@@ -8,19 +10,36 @@ public class Scenario22 {
 
 	private int arr[];
 	private int size;
-	
-	public Scenario22(){}
+	private int capacity;
+	private static final int DEFAULT_CAPACITY = 16;
+	public Scenario22(){
+		this(DEFAULT_CAPACITY);	
+	}
 
 	/**
 	* Initialize {@link Scenario22}
 	*
 	* */
-	public Scenario22(int size) {
-		this.size = size;
-		arr = new int[size];
+	public Scenario22(final int capacity) {
+		this.capacity = capacity;
+		this.arr = new int[capacity];
+		this.size = 0;
+	}
+
+	public void addElement(final int element){
+		Objects.requireNonNull(element,"Elements can not be null");
+		if (this.arr.length == this.capacity) {
+			this.arr = Arrays.copyOf(arr, newCapacity(2 * this.capacity));
+		}
+		this.arr[this.size] = element;
+		size++;
 	}
 	
-	
+	public int newCapacity(int capacity){
+		this.capacity = capacity;
+		return this.capacity;
+	}
+
 	/**
 	*  Two ways to the insert 
 	*  1. if value a position need to be repalced 
@@ -28,13 +47,15 @@ public class Scenario22 {
 	*  
 	* */
 	public int insert(int value,int position) {
-		int insertValue = value;
-		if (position > size + 1) {
-			throw new ArrayIndexOutOfBoundsException(format("%d suggested index is out of index",position)); 
+		this.arr[position]=value;
+		return this.arr[position];
+	}
+
+	public String print(){
+		StringJoiner stringJoiner = new StringJoiner(" -> ");
+		for (int i = 0;i < arr.length;i++) {
+			stringJoiner.add(""+arr[i]);
 		}
-		if(position < size) {
-			arr[position] = insertValue;
-		}
-		return 0;
+		return stringJoiner.toString();
 	}
 }
