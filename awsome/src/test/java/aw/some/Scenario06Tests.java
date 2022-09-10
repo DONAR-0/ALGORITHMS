@@ -94,5 +94,18 @@ public class Scenario06Tests {
 
 	}
 	
+	@Test
+	@DisplayName("TEST_5:Print Pairs using Set")
+	public void scenario06_Test_05() {
+		Scenario06 scenario06 = new Scenario06();
+		int[][] matrix = {
+			{2,4,3,5,7,8,9},
+			{2,4,3,5,6,-2,4,7,8,9},
+		};
+		LOGGER.info("Find Sum pairs");
+		LOGGER.info("{}",matrix[0]);
+		assertThat(scenario06.checkIfPairExist(matrix[0], 7),is(true));
+	}
+	
 }
 

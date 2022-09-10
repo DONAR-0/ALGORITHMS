@@ -21,4 +21,6 @@
 ###### [Scenario19](/awsome/src/main/java/aw/some/Scenario19.java) :  Very Fundamental Program
 ###### [Scenario20](/awsome/src/main/java/aw/some/Scenario20.java) :  Vector In Java
 ###### [Scenario21](/awsome/src/main/java/aw/some/Scenario21.java) :  Date Java
+###### [Scenario22](/awsome/src/main/java/aw/some/Scenario22.java) :  Insert in Array Program
+###### [Scenario23](/awsome/src/main/java/aw/some/Scenario23.java) :  An Immuatble object
 

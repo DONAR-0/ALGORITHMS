@@ -90,7 +90,7 @@ public class Scenario06 {
 			int k = numbers[left] + numbers[right];
 			if (sum == k) {
 				System.out.printf("(%d,%d) %n",numbers[left],numbers[right]);
-			left = left + 1;
+				left = left + 1;
 				right = right - 1;
 			} else if(k < sum){
 				left = left + 1;
@@ -99,4 +99,30 @@ public class Scenario06 {
 			}
 		}
 	}
+
+	/***
+	* Revisit
+	*
+	* @param numbers
+	* @param sum
+	* @return true/false
+	*/
+	public boolean checkIfPairExist(int[] numbers,int sum){
+		if (numbers.length < 2) {
+			throw new IllegalArgumentException("Array size should be greater than three");
+		}
+		Set<Integer> trackerSet = new HashSet<>(numbers.length);
+		for(int integer : numbers){
+			int target = sum - integer;
+			if (!trackerSet.contains(target)) {
+				trackerSet.add(integer);	
+			} else {
+				return true;
+			}
+		}
+		return false;
+	}
+
+
+
 }
