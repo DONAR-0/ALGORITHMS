@@ -3,22 +3,31 @@ package aw.some;
 import static java.lang.String.format;
 
 /**
- * Recursion
+ * Recursion : Program related to recursion
+ *
  */
 public class Scenario12 {
-    public Integer factorialRecursion(int number) {
+
+    /**
+     * Factorial using recursion
+     *
+     * @param number number need to refactored
+     * @return output
+     */
+    public double factorialRecursion(double number) {
         if (number == 1) {
             return 1;
         }
         return number * factorialRecursion(number - 1);
     }
 
-    public int fibonacciRecusrion(int number) {
+    public double fibonacciRecusrion(double number) {
         if (number <= 1) {
             return 1;
         }
         return fibonacciRecusrion(number - 1) + fibonacciRecusrion(number - 2);
     }
+
 
     /**
      * In Recursion X is going to gets impacted by y
@@ -81,11 +90,11 @@ public class Scenario12 {
     }
 
     public int powerRecursionSimpler(int a, int b) {
-
         if (b == 0) {
             return 1;
         }
         return powerRecursion(a, b - 1) * a;
     }
+
 
 }

@@ -22,9 +22,10 @@ public class Scenario12Tests {
     public void scenario12_Test_01() {
         Scenario12 scenario12 = new Scenario12();
         int inputValue = 5;
-        Integer expectedValue = 120;
-        Integer actualValue = scenario12.factorialRecursion(inputValue);
+        double expectedValue = 120;
+        double actualValue = scenario12.factorialRecursion(inputValue);
         assertThat(actualValue, is(equalTo(expectedValue)));
+        LOGGER.info("{}",scenario12.factorialRecursion(25));
     }
 
 
@@ -41,8 +42,8 @@ public class Scenario12Tests {
         // 8 + 5
         // 13 + 8
         // 21 + 13
-        Integer expectedValue = 34;
-        Integer actualValue = scenario12.fibonacciRecusrion(inputValue);
+        double expectedValue = 34;
+        double actualValue = scenario12.fibonacciRecusrion(inputValue);
         assertThat(actualValue, is(equalTo(expectedValue)));
     }
 
