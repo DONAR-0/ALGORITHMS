@@ -21,11 +21,16 @@ public class Scenario12 {
         return number * factorialRecursion(number - 1);
     }
 
-    public double fibonacciRecusrion(double number) {
+    /**
+     * Fibonacci number
+     * @param number number fibonacci
+     * @return output of number
+     */
+    public double fibonacciRecursion(double number) {
         if (number <= 1) {
             return 1;
         }
-        return fibonacciRecusrion(number - 1) + fibonacciRecusrion(number - 2);
+        return fibonacciRecursion(number - 1) + fibonacciRecursion(number - 2);
     }
 
 
@@ -96,5 +101,20 @@ public class Scenario12 {
         return powerRecursion(a, b - 1) * a;
     }
 
+    //================================ For Vs recursion ======================================================//
+    public void forLoop(int number){
+        for (int i = 0; i < number; i++) {
+            System.out.println(i);
+        }
+    }
 
+    public void for_loop_recursion(int number){
+        for_loop_recursion(0,number);
+    }
+
+    private void for_loop_recursion(int i,int number) {
+        if (!(i < number)) return;
+        System.out.println(i);
+        for_loop_recursion(i+1,number);
+    }
 }

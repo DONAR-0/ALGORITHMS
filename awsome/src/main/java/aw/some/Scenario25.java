@@ -56,20 +56,23 @@ public class Scenario25 {
         //Two Sum
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums.length; j++) {
-                System.out.println(i+","+j + "-> " + nums[i] +","+nums[j]);
+                System.out.println(i + "," + j + "-> " + nums[i] + "," + nums[j]);
             }
         }
         //Three sum
-        for (int i = 0;i < nums.length;i++) {
-            for (int j = 0; j < nums.length;j++) {
-                for (int k =0;k < nums.length;k++) {
-                    System.out.println(i + ","+ j + "," + k + "-> " + nums[i] +"+"+nums[j] + "+" + nums[k] + "="+(nums[i]+nums[j]+nums[k]));
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+                for (int k = 0; k < nums.length; k++) {
+                    System.out.println(i + "," + j + "," + k + "-> " + nums[i] + "+" + nums[j] + "+" + nums[k] + "=" + (nums[i] + nums[j] + nums[k]));
                 }
             }
         }
     }
 
-    public void oneSumBackTrack(int[] sum) {
+
+    public void twoSumBackTrack(int[] array) {
 
     }
+
+    private void twoSumBackTrack(int[] array,StringBuilder stringBuilder) {}
 }

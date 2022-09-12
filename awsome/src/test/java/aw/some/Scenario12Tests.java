@@ -43,7 +43,7 @@ public class Scenario12Tests {
         // 13 + 8
         // 21 + 13
         double expectedValue = 34;
-        double actualValue = scenario12.fibonacciRecusrion(inputValue);
+        double actualValue = scenario12.fibonacciRecursion(inputValue);
         assertThat(actualValue, is(equalTo(expectedValue)));
     }
 
@@ -110,4 +110,11 @@ public class Scenario12Tests {
 
     }
 
+    @Test
+    @DisplayName("scenario12_Test_08")
+    public void scenario12_Test_08(){
+        Scenario12 scenario12 = new Scenario12();
+        scenario12.forLoop(5);
+        scenario12.for_loop_recursion(6);
+    }
 }

@@ -39,6 +39,6 @@ public class Scenario25Tests {
         Scenario25 scenario25 = new Scenario25();
         //
         int[] array = new int[]{-1, 2, -1, 4};
-        scenario25.twoSum(array);
+        scenario25.twoSumBackTrack(array);
     }
 }
