@@ -23,4 +23,4 @@
 ###### [Scenario21](/awsome/src/main/java/aw/some/Scenario21.java) :  Date Java
 ###### [Scenario22](/awsome/src/main/java/aw/some/Scenario22.java) :  Insert in Array Program
 ###### [Scenario23](/awsome/src/main/java/aw/some/Scenario23.java) :  An Immuatble object
-
+###### [Scenario23](/awsome/src/main/java/aw/some/Scenario23.java) :  Resizing Array
