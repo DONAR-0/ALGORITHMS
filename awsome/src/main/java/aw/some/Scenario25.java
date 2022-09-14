@@ -69,10 +69,50 @@ public class Scenario25 {
         }
     }
 
-
-    public void twoSumBackTrack(int[] array) {
-
+    /***
+    * Find Combination of every element 
+    *
+    * @param arr array of number
+    * @param data data where number is stored 
+    * @param start start of data storing 
+    * @param end end of the data storing 
+    * @param index current index of number 
+    * @param r number of character 
+    */
+    public void combination(int arr[],int data[],int start,int end,int index,int r){
+   
+		if(index == r) {
+			for (int j = 0; j < r;j++){
+				System.out.println(data[j]+" ");
+			}
+			System.out.println("");
+			return;
+		}
+		
+		for (int i = start;i <= end && end - i + 1 >= r - index; i++) {
+			data[index] = arr[i];
+			combination(arr, data, i+1,end,index + 1,r);
+		}
     }
 
-    private void twoSumBackTrack(int[] array,StringBuilder stringBuilder) {}
+    /***
+    * Starting point of finding combination
+    *
+    * @param arr arr of number
+    * @param n number of combination that you want
+    * @param r value of the number
+    */
+    public void combination(int arr[],int n,int r) {
+	int[] data = new int[r];
+	combination(arr, data, 0, n - 1, 0, r);
+    }
+
+    public void combination(int arr[],int r) {
+	int data[] = new int[r];
+	int n = arr.length;
+	combination(arr,data,0,n-1,0,r);
+    }
+    
+    private static final List<String> values = new ArrayList<String>();
+    
 }

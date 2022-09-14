@@ -23,7 +23,7 @@ public class Scenario25Tests {
     }
 
     @Test
-    @DisplayName("scenario25_Test_01")
+    @DisplayName("scenario25_Test_02")
     public void scenario25_Test_02() {
         Scenario25 scenario25 = new Scenario25();
         //
@@ -34,11 +34,11 @@ public class Scenario25Tests {
     }
 
     @Test
-    @DisplayName("scenario25_Test_01")
+    @DisplayName("scenario25_Test_03")
     public void scenario25_Test_03() {
         Scenario25 scenario25 = new Scenario25();
         //
-        int[] array = new int[]{-1, 2, -1, 4};
-        scenario25.twoSumBackTrack(array);
+        int[] array = new int[]{3, 2, -1, 4};
+        scenario25.combination(array, 4, 3);
     }
 }
