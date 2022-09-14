@@ -3,6 +3,8 @@ package aw.some;
 import java.util.ArrayList;
 import java.util.List;
 
+import sun.jvm.hotspot.ci.ciMethod;
+
 /**
  * Given an array nums of length n and integer target ,
  * find three integer in nums such that
@@ -115,4 +117,18 @@ public class Scenario25 {
     
     private static final List<String> values = new ArrayList<String>();
     
+    public void combinationList(int[] arr, int r) {
+	int n = arr.length;
+		
+   }
+   
+   public void combinationList(int[] arr,List<String> values,int start,int end,int index,int r) {
+         if (index == r) {
+           	StringBuilder stringBuilder = new StringBuilder();
+
+	     for(int j = 0; j < r;j++) {
+	    	 
+	     }	
+         } 
+   } 
 }
