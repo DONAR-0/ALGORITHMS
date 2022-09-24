@@ -12,6 +12,7 @@ import static org.hamcrest.Matchers.is;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 /**
 * Scenario28Tests
@@ -27,6 +28,6 @@ public class Scenario28Tests {
 		ArrayList<Integer> array = new ArrayList<>(Arrays.asList(10,12,15,16,18,19,20,16,12,18,19));
 		
 		Scenario28 scenario28 = new Scenario28();
-		assertThat(scenario28.remove_duplicate(array),is(equalTo(array.stream().distinct().toList())));
+		assertThat(scenario28.remove_duplicate(array),is(equalTo(array.stream().distinct().collect(Collectors.toList()))));
 	}
 }
