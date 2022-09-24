@@ -80,6 +80,12 @@ public class Scenario06 {
 		return hashMap;
 	}
 
+	/***
+	* Time Complexity O(nlogn)
+	*
+	* @param numbers
+	* @param sum
+	*/
 	public void printPairsLoSpaceComplexity(int[] numbers,int sum) {
 		if (numbers.length < 2) {
 			throw new IllegalArgumentException("");
@@ -92,9 +98,9 @@ public class Scenario06 {
 				System.out.printf("(%d,%d) %n",numbers[left],numbers[right]);
 				left = left + 1;
 				right = right - 1;
-			} else if(k < sum){
+			} else if(sum < k){
 				left = left + 1;
-			} else if(k > sum) {
+			} else {
 				right = right - 1;
 			}
 		}

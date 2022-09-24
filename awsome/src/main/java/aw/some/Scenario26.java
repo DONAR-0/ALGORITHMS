@@ -3,6 +3,8 @@ package aw.some;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+import javax.naming.NotContextException;
+
 /***
  * The LinkedStack class represent a last-in-first-out
  * stack of generic items.
@@ -15,91 +17,117 @@ import java.util.NoSuchElementException;
  *
  * The push pop peek size and isEmpty operations all take constant time
  * in the worst case.
- * 
+ * push
+ * pop
+ * peek 
  */
 public class Scenario26<Item> implements Iterable<Item> {
 
-    private int n;
-    private Node first;
-    
-    public Scenario26() {
-        first = null;
-        n = 0;
-        assert check();
-    }
+	private static final int DEFAULT_CAPACITY = 8;
+	private Item[] a;
+	private int n;
 
-    @Override
-    public Iterator<Item> iterator() {
-        return null;
-    }
+	public Scenario26(){
+		this(DEFAULT_CAPACITY);
+	}
+	public Scenario26(int size) {
+		a = (Item[]) new Object[size];
+		n = 0;
+	}
 
-    private class Node {
-        private Item item;
-        private Node next;
-    }
+	/***
+	* pushing the value in the array 
+	*
+	* @param item
+	*/
+	public void push(Item item) {
+		if ( n == a.length) resize(2 * n);
+		a[n++] = item;
+	}
+	
+	/***
+	* Pop the item by setting the last value at 
+	* to null
+	* @return Item is going to be popped
+	*/
+	public Item pop() {
+		if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+		Item item = a[n - 1];
+		a[n - 1] = null;
+		n --;
+		// shrink size of array if necessary
+		if ( n > 0 && n == a.length/4) resize(a.length/2);
+		return item;
+	}
 
-    /**
-     * Is this stack empty ?
-     * 
-     * @return true if this stack is empty; false otherwise
-     */
-    public boolean isEmpty() {
-        return first == null;
-    }
+	public Item peek() {
+		if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+		Item peekedItem = a[n - 1];
+		return peekedItem;
+	}
+	
+	/***
+	* As the item pushing catching up with the list 
+	* we need to resize
+	*
+	* @param capacity
+	*/
+	private void resize(int capacity) {
+		assert capacity > n;
 
-    /**
-     * Returns the numbers of items in the stack.
-     * @return the number of items in the stack
-     */
-    public int size() {
-        return n;
-    }
+		Item[] copy = (Item[]) new Object[capacity];
+		for (int i = 0; i < a.length; i++) {
+			copy[i] = a[i];
+		}
+		// assign an array
+		a = copy;
+		// alternative implementation
+		// a = java.util.Arrays.copyOf(a, capacity);
+	}
 
-    /**
-     * Add the item to this stack
-     * 
-     * @param item the item need to add
-     */
-    public void push(Item item) {
-       Node oldFirst = first;
-       first = new Node();
-       first.item = item;
-       first.next = oldFirst;
-       n++;
-       assert check();
-    }
+	/***
+	* return false if isEmpty
+	*
+	* @return boolean true/false
+	*/
+	public boolean isEmpty(){
+		return this.n == 0;
+	}
+	
+	/***
+	* Returns the size of list
+	* @return return the size
+	*/
+	public int size() {
+		return this.n;
+	}
 
-    /**
-     * Removes and Returns the items most recently addded to this stack
-     * 
-     * @return the items most recently added 
-     * @throws NoSuchElementException if this stack is empty
-     */
-    public Item pop() {
-        if (isEmpty()) {
-           throw new NoSuchElementException("Stack underflow"); 
-        }
-        Item item = first.item;
-        first = first.next;
-        n--;
-        assert check();
-        return item;
-    }
+	/***
+	 * Sample {@link Iterator}
+	 * will give reverse values of the same
+	 */
+	public Iterator<Item> iterator() {
+		return new ReverseArrayIterator();
+	}
 
-    /**
-     * Returns (but does not remove) the item most recently added to this stack.
-     * @return the item most recently added to this stack.
-     * @throws NoSuchElementException if the stack empty.
-     */
-    public Item peek() {
-            if (isEmpty()) {
-               throw new NoSuchElementException("Stack Overflow"); 
-            }
-            return first.item;
-    }
-    
-    private boolean check() {
-        return false;
-    }
+	private class ReverseArrayIterator implements Iterator<Item> {
+		private int i;
 
+		public ReverseArrayIterator() {
+			i = n -1;
+		}
+
+		public boolean hasNext() {
+			return i >= 0;
+		}
+
+		public void remove() {
+			throw new UnsupportedOperationException();
+		}
+
+		public Item next() {
+			if (!hasNext()) throw new NoSuchElementException();
+			return a[i--];
+		}
+	}
 }
