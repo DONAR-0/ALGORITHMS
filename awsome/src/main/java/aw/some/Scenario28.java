@@ -15,8 +15,11 @@ public class Scenario28 {
 
 
 	private static final Logger LOG = LoggerFactory.getLogger(Scenario28.class);
+	
 	/***
 	* Remove Duplicates when array is param
+	* time Complexity of o(n2)
+	* space Complexity of o(n)
 	*
 	* @param array
 	* @return
@@ -25,7 +28,6 @@ public class Scenario28 {
 		var outputList = new ArrayList<Integer>();
 		for (Integer intV:array) {
 			if (outputList.contains(intV)) {
-				LOG.info("{}",intV);
 				continue;	
 			} else {
 				outputList.add(intV);
@@ -33,4 +35,14 @@ public class Scenario28 {
 		}
 		return outputList;
 	}
+	
+	/***
+	 * Now one more solution is to
+	 * sort the array and match with previous character
+	 *
+	 *
+	 * */
+	 public void remove_duplicate_1(ArrayList<Integer> array) {
+		
+	 }
 }

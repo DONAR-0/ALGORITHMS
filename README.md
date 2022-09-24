@@ -23,4 +23,7 @@
 ###### [Scenario21](/awsome/src/main/java/aw/some/Scenario21.java) :  Date Java
 ###### [Scenario22](/awsome/src/main/java/aw/some/Scenario22.java) :  Insert in Array Program
 ###### [Scenario23](/awsome/src/main/java/aw/some/Scenario23.java) :  An Immuatble object
-###### [Scenario23](/awsome/src/main/java/aw/some/Scenario23.java) :  Resizing Array
+###### [Scenario24](/awsome/src/main/java/aw/some/Scenario24.java) :  Resizing Array
+###### [Scenario25](/awsome/src/main/java/aw/some/Scenario25.java) :  Combination Problem to understand backtracking
+###### [Scenario26](/awsome/src/main/java/aw/some/Scenario26.java) :  Resizing Array
+###### [Scenario27](/awsome/src/main/java/aw/some/Scenario27.java) :  find first repeatable character
