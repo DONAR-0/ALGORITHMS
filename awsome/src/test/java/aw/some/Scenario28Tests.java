@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 public class Scenario28Tests {
 
 	private static final Logger LOG = LoggerFactory.getLogger(Scenario28Tests.class);
+
 	@Test
 	@DisplayName("scenario28_Test_01")
 	public void scenario28_Test_01() {
@@ -29,5 +30,14 @@ public class Scenario28Tests {
 		
 		Scenario28 scenario28 = new Scenario28();
 		assertThat(scenario28.remove_duplicate(array),is(equalTo(array.stream().distinct().collect(Collectors.toList()))));
+	}
+
+	@Test
+	@DisplayName("scenario28_Test_01")
+	public void scenario28_Test_02() {
+		ArrayList<Integer> array = new ArrayList<>(Arrays.asList(10,12,15,16,18,19,20,16,12,18));
+		
+		Scenario28 scenario28 = new Scenario28();
+		assertThat(scenario28.remove_duplicate_1(array),is(equalTo(array.stream().distinct().collect(Collectors.toList()))));
 	}
 }
