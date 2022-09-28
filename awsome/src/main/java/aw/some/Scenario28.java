@@ -39,10 +39,16 @@ public class Scenario28 {
 	/***
 	 * Now one more solution is to
 	 * sort the array and match with previous character
-	 *
-	 *
+	 * 
+	 * @param array
 	 * */
 	 public void remove_duplicate_1(ArrayList<Integer> array) {
-		
+		var outputList = new ArrayList<Integer>();
+		int value = outputList.get(0);
+		for (int i = 1; i < array.size(); i++) {
+			if (array.get(i - 1) ==	array.get(i)){
+				
+			}
+		}
 	 }
 }
