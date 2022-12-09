@@ -27,3 +27,6 @@
 ###### [Scenario25](/awsome/src/main/java/aw/some/Scenario25.java) :  Combination Problem to understand backtracking
 ###### [Scenario26](/awsome/src/main/java/aw/some/Scenario26.java) :  Resizing Array
 ###### [Scenario27](/awsome/src/main/java/aw/some/Scenario27.java) :  find first repeatable character
+###### [Scenario28](/awsome/src/main/java/aw/some/Scenario28.java) :  Remove Duplicate from Array
+## 3.0 Starts from Here
+
