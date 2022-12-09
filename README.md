@@ -30,4 +30,5 @@
 ###### [Scenario28](/awsome/src/main/java/aw/some/Scenario28.java) :  Remove Duplicate from Array
 ## 3.0 Starts from Here
 ###### [Scenario29](/awsome/src/main/java/aw/some/Scenario29.java) :  Find pair from array
+###### [Scenario30](/awsome/src/main/java/aw/some/Scenario30.java) :  Find First Repeating Character
 
