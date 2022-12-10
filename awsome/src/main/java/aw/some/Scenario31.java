@@ -27,6 +27,14 @@ public class Scenario31 {
         return noDuplicatesArr;
     }
 
+    /**
+     * By Sorting the array
+     * TC : O(nlogn)
+     * SPC : O(n)
+     *
+     * @param arr
+     * @return
+     */
    public static int[] removeDuplicates_2(int[] arr) {
        if (arr.length == 0) {
            int[] emptyArr = new int[0];
