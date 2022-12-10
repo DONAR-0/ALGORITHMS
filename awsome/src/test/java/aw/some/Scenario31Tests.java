@@ -5,7 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.hamcrest.core.Every.everyItem;
+import java.util.Arrays;
+
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 
@@ -30,6 +32,6 @@ public class Scenario31Tests {
         int[] arr = new int[]{21, 22, 13, 17, 32, 36, 90, 67, 45, 13};
         int[] arr_1 = new int[]{21, 22, 13, 17, 32, 36, 90, 67, 45};
         Scenario31.removeDuplicates(arr);
-        assertThat(Scenario31.removeDuplicates_2(arr), equalTo(arr_1));
+        assertThat(Arrays.asList(Scenario31.removeDuplicates_2(arr)), containsInAnyOrder(Arrays.asList(arr_1)));
     }
 }
