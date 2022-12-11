@@ -34,5 +34,6 @@
 ###### [Scenario31](/awsome/src/main/java/aw/some/Scenario31.java) :  Removing Duplicates
 ###### [Scenario32](/awsome/src/main/java/aw/some/Scenario32.java) :  Finding Duplicates
 ###### [Scenario33](/awsome/src/main/java/aw/some/Scenario33.java) :  Tree Traversal
+###### [Scenario34](/awsome/src/main/java/aw/some/Scenario34.java) :  Max Sum Possible in Array
 
 
