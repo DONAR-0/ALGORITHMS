@@ -10,9 +10,13 @@ import org.slf4j.LoggerFactory;
  */
 public class Scenario33 {
 
-    private Tree root;
-
     private static final Logger LOG = LoggerFactory.getLogger(Scenario33.class);
+
+    Tree root;
+
+    public Scenario33(){
+        this.root = null;
+    }
     public static class Tree{
         int data;
         Tree left;
