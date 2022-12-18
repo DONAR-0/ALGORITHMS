@@ -53,4 +53,46 @@ public class Scenario37 {
         }
         return left;
     }
+
+    /**
+     * By Dealing with links
+     *  Time Complexity: O(n)
+     *  Space Complexity: O(1)
+     * @param list
+     */
+    static Node reverseList_ByLinks(LinkedList list){
+        Node previous = null;
+        Node current = list.head;
+        while (current != null){
+            Node next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        list.head = previous;
+        return list.head;
+    }
+
+    /**
+     * By Dealing with links recursively
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     *
+     * @param node
+     * @return
+     */
+    static Node reverseNodes(Node node){
+        if (node == null || node.next == null){
+            return node;
+        }
+        Node reversed = reverseNodes(node.next);
+        node.next.next = node;
+        node.next = null;
+        return reversed;
+    }
+
+    private static Node reverseList_rec(LinkedList list) {
+        list.head = reverseNodes(list.head);
+        return list.head;
+    }
 }
