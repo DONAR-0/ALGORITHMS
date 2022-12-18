@@ -37,3 +37,4 @@
 ###### [Scenario34](/awsome/src/main/java/aw/some/Scenario34.java) :  Max Sum Possible in Array
 ###### [Scenario35](/awsome/src/main/java/aw/some/Scenario35.java) :  Reversing the tree
 ###### [Scenario36](/awsome/src/main/java/aw/some/Scenario36.java) :  Longest Substring without repeating character 
+###### [Scenario37](/awsome/src/main/java/aw/some/Scenario37.java) :  Reversing the linked list
