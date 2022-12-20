@@ -39,3 +39,4 @@
 ###### [Scenario36](/awsome/src/main/java/aw/some/Scenario36.java) :  Longest Substring without repeating character 
 ###### [Scenario37](/awsome/src/main/java/aw/some/Scenario37.java) :  Reversing the linked list
 ###### [Scenario38](/awsome/src/main/java/aw/some/Scenario38.java) :  Peak Finding
+###### [Scenario39](/awsome/src/main/java/aw/some/Scenario39.java) :  Linked list Palindrome
