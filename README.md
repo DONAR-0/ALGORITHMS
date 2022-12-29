@@ -44,3 +44,4 @@
 ###### [Scenario41](/awsome/src/main/java/aw/some/Scenario41.java) :  Sub String index from a Longer String
 ###### [Scenario42](/awsome/src/main/java/aw/some/Scenario42.java) :  Breadth First Search
 ###### [Scenario43](/awsome/src/main/java/aw/some/Scenario43.java) :  Sort Linked list
+###### [Scenario44](/awsome/src/main/java/aw/some/Scenario44.java) :  Validate if Tree is BST
