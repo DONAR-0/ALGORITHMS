@@ -41,5 +41,6 @@
 ###### [Scenario38](/awsome/src/main/java/aw/some/Scenario38.java) :  Peak Finding
 ###### [Scenario39](/awsome/src/main/java/aw/some/Scenario39.java) :  Linked list Palindrome
 ###### [Scenario40](/awsome/src/main/java/aw/some/Scenario40.java) :  Longest Palindrome Possible
-###### [Scenario40](/awsome/src/main/java/aw/some/Scenario41.java) :  Sub String index from a Longer String
-
+###### [Scenario41](/awsome/src/main/java/aw/some/Scenario41.java) :  Sub String index from a Longer String
+###### [Scenario42](/awsome/src/main/java/aw/some/Scenario42.java) :  Breadth First Search
+###### [Scenario43](/awsome/src/main/java/aw/some/Scenario43.java) :  Sort Linked list
