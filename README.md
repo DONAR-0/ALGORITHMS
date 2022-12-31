@@ -48,3 +48,4 @@
 ###### [Scenario45](/awsome/src/main/java/aw/some/Scenario45.java) :  Minimum cost path problem
 ###### [Scenario46](/awsome/src/main/java/aw/some/Scenario46.java) :  Is Tree Balanced
 ###### [Scenario47](/awsome/src/main/java/aw/some/Scenario47.java) :  Number of paths in matrix
+###### [Scenario48](/awsome/src/main/java/aw/some/Scenario48.java) :  Breadth First Search using levels
