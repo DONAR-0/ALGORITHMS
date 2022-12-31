@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Objects;
 
 @DisplayName("Get Values by level")
 public class Scenario48Tests {
