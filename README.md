@@ -51,3 +51,4 @@
 ###### [Scenario48](/awsome/src/main/java/aw/some/Scenario48.java) :  Breadth First Search using levels
 ###### [Scenario49](/awsome/src/main/java/aw/some/Scenario49.java) :  Product of array except itself
 ###### [Scenario50](/awsome/src/main/java/aw/some/Scenario50.java) :  Can Jump in array
+###### [Scenario51](/awsome/src/main/java/aw/some/Scenario51.java) :  Graph Deapth First Search

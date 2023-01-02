@@ -25,6 +25,13 @@ public class Scenario30 {
        return '\0';
    }
 
+    /**
+     * TC: O(n)
+     * SC: O(n)
+     *
+     * @param str
+     * @return
+     */
    public static char firstRepeatingCharacter_2(String str) {
 
        HashMap<Character,Boolean> visited = new HashMap<>();
