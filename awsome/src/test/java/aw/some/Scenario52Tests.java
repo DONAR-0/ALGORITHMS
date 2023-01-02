@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
-@DisplayName("Dfs Graph")
-public class Scenario51Tests {
+@DisplayName("Bfs Graph")
+public class Scenario52Tests {
 
 
     @Test
@@ -20,7 +20,7 @@ public class Scenario51Tests {
          *      |     |     |
          *      5____12_____13
          */
-        Scenario51.Graph graph = new Scenario51.Graph();
+        Scenario52.Graph graph = new Scenario52.Graph();
         HashMap<Integer, ArrayList<Integer>> adjacentList = new HashMap<>();
         var edge_1 = new ArrayList<Integer>();
         edge_1.add(2);
@@ -50,7 +50,7 @@ public class Scenario51Tests {
         adjacentList.put(5, edge_5);
         adjacentList.put(12, edge_12);
         adjacentList.put(13, edge_13);
-        graph.adjacentList = adjacentList;
-        Scenario51.dfs(graph,1);
+        graph.adjList = adjacentList;
+        Scenario52.bfs(graph,1);
     }
 }
