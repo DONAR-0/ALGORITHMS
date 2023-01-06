@@ -53,3 +53,6 @@
 ###### [Scenario50](/awsome/src/main/java/aw/some/Scenario50.java) :  Can Jump in array
 ###### [Scenario51](/awsome/src/main/java/aw/some/Scenario51.java) :  Graph Deapth First Search
 ###### [Scenario52](/awsome/src/main/java/aw/some/Scenario52.java) :  Graph Breadth First Search
+###### [Scenario53](/awsome/src/main/java/aw/some/Scenario53.java) :  String subsequence problem
+###### [Scenario54](/awsome/src/main/java/aw/some/Scenario54.java) :  Valid bracket problem
+

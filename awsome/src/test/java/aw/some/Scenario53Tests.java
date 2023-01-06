@@ -12,7 +12,7 @@ public class Scenario53Tests {
     @Test
     @DisplayName("TEST_1")
     public void testStringSequences(){
-        String str = "lookawaylookawaydismay";
+        String str = "look";
         LOG.info("{}",Scenario53.getSubsequences(str));
     }
 }

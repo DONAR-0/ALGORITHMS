@@ -28,7 +28,14 @@ public class Scenario54 {
         List<Character> openingBrackets = Arrays.asList('(','{','[');
         Stack<Character> stack = new Stack<>();
         for (char ch: str.toCharArray()) {
-
+		if(openingBrackets.contains(ch)){
+			stack.push(ch);
+		} else if(stack.size() > 0 && ch == bracketsMap.get(stack.peek())){
+			stack.pop();
+		} else {
+			return false;
+		}
         }
+	return stack.isEmpty();
     }
 }
