@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
  */
 
 @DisplayName("Flatten a tree")
-public class Scenario55Test {
+public class Scenario55Tests {
 
   @Test
   @DisplayName("TEST_1")
