@@ -3,6 +3,7 @@ package aw.some;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -28,6 +29,7 @@ public class Scenario56Tests {
     root.right.right.right.right = new Scenario56.Tree(77);
     Scenario56.lowestCommonAncestor(root, 13, 24);
 
-    assertThat(Scenario56.lowestCommonAncestor(root, 13, 24).data,is(equalTo(13)));
+    assertThat(Scenario56.lowestCommonAncestor(root, 13, 24).data,
+               is(equalTo(13)));
   }
 }

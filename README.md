@@ -57,5 +57,6 @@
 ###### [Scenario54](/awsome/src/main/java/aw/some/Scenario54.java) :  Valid bracket problem
 ###### [Scenario55](/awsome/src/main/java/aw/some/Scenario55.java) :  Flatten tree problem
 ###### [Scenario56](/awsome/src/main/java/aw/some/Scenario56.java) :  Lowest Common Ancestor problem
+###### [Scenario57](/awsome/src/main/java/aw/some/Scenario57.java) :  Circular array minimum problem
 
 
