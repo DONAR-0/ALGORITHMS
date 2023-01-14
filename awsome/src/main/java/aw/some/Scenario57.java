@@ -2,6 +2,7 @@ package aw.some;
 
 /**
  * Scenario57
+ * Circular array minimum problem
  */
 public class Scenario57 {
 
@@ -28,7 +29,7 @@ public class Scenario57 {
   }
 
   /**
-   * By Traversing the whole {@link java.lang.reflect.Array}
+   * By Traversing the whole Array
    * Time Complexity: O(n)
    * Space Complexity: O(1)
    *
@@ -41,6 +42,15 @@ public class Scenario57 {
     return min;
   }
 
+  /**
+  * TC: O(log n)
+  * SC: O(1)
+  *
+  * @param arr
+  * @param left
+  * @param right
+  * @return
+  */
   public static int minimum_3(int[] arr, int left, int right) {
     if (left >= right || arr[right] > arr[left])
       return arr[left];
