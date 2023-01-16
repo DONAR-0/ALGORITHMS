@@ -8,7 +8,6 @@ package aw.some;
  *
  */
 public class Scenario58 {
-
 	public static class Node {
 		int data;
 		Node next;
@@ -61,8 +60,3 @@ public class Scenario58 {
 		return output;
 	}
 }
-
-
-
-
-
