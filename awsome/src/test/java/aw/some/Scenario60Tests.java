@@ -19,7 +19,17 @@ public class Scenario60Tests {
 	@DisplayName("TEST_1")
 	public void testNumberOfSubsets(){
 		int[] arr = new int[]{12, 13, 21, 25, 26, 9, 6, 11};
-		LOGGER.info("{}",Scenario60.subsetThatSumsUptoK(arr, 25));
-		assertThat(Scenario60.subsetThatSumsUptoK(arr,25),is(equalTo(2)));
+		LOGGER.info("{}",Scenario60.subsetThatSumsUptoK_1(arr, 25));
+		assertThat(Scenario60.subsetThatSumsUptoK_1(arr,25),is(equalTo(2)));
+	}
+
+
+
+	@Test
+	@DisplayName("TEST_2")
+	public void testNumberOfSubsets_2(){
+		int[] arr = new int[]{12, 13, 21, 25, 26, 9, 6, 11};
+		LOGGER.info("{}",Scenario60.subsetsThatSumsUptoK_2(arr, 25));
+		assertThat(Scenario60.subsetsThatSumsUptoK_2(arr,25),is(equalTo(2)));
 	}
 }
