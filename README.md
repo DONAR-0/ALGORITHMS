@@ -60,5 +60,6 @@
 ###### [Scenario57](/awsome/src/main/java/aw/some/Scenario57.java) :  Circular array minimum problem
 ###### [Scenario58](/awsome/src/main/java/aw/some/Scenario58.java) :  Added Two Linked List
 ###### [Scenario59](/awsome/src/main/java/aw/some/Scenario59.java) :  Number of ways to climb the steps
+###### [Scenario60](/awsome/src/main/java/aw/some/Scenario60.java) :  Number of subset in array
 
 
