@@ -61,5 +61,8 @@
 ###### [Scenario58](/awsome/src/main/java/aw/some/Scenario58.java) :  Added Two Linked List
 ###### [Scenario59](/awsome/src/main/java/aw/some/Scenario59.java) :  Number of ways to climb the steps
 ###### [Scenario60](/awsome/src/main/java/aw/some/Scenario60.java) :  Number of subset in array
+###### [Scenario61](/awsome/src/main/java/aw/some/Scenario61.java) :  Ways to decode the problem
+###### [Scenario62](/awsome/src/main/java/aw/some/Scenario62.java) :  remove node from the BST
+
 
 

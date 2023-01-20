@@ -24,4 +24,14 @@ public class Scenario61Tests {
 	   LOGGER.info("{}",String.valueOf(Scenario61.waysToDecode_1(value)));
 	   assertThat(Scenario61.waysToDecode_1("22"), is(equalTo(2)));
 	}
+
+
+	@Test
+	@DisplayName("TEST_2")
+	public void testAStringTheValue_2(){
+		String value = "22";
+		LOGGER.info("{}",String.valueOf(Scenario61.waysToDecode_2(value)));
+		assertThat(Scenario61.waysToDecode_1("22"), is(equalTo(2)));
+	}
+
 }
