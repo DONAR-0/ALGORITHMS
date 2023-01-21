@@ -63,6 +63,7 @@
 ###### [Scenario60](/awsome/src/main/java/aw/some/Scenario60.java) :  Number of subset in array
 ###### [Scenario61](/awsome/src/main/java/aw/some/Scenario61.java) :  Ways to decode the problem
 ###### [Scenario62](/awsome/src/main/java/aw/some/Scenario62.java) :  remove node from the BST
+###### [Scenario63](/awsome/src/main/java/aw/some/Scenario63.java) :  Arraylist Permutation
 
 
 
