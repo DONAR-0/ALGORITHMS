@@ -64,6 +64,7 @@
 ###### [Scenario61](/awsome/src/main/java/aw/some/Scenario61.java) :  Ways to decode the problem
 ###### [Scenario62](/awsome/src/main/java/aw/some/Scenario62.java) :  remove node from the BST
 ###### [Scenario63](/awsome/src/main/java/aw/some/Scenario63.java) :  Arraylist Permutation
+###### [Scenario64](/awsome/src/main/java/aw/some/Scenario64.java) :  Lowest common subsequneces
 
 
 
