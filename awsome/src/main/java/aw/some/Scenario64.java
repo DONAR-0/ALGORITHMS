@@ -85,8 +85,29 @@ public class Scenario64 {
         } else if (str1.charAt(i) == str2.charAt(j)) {
             return 1 + lcs_3(str1, str2, i + 1, j + 1, memoiz);
         } else {
-
+            int output = Math.max(lcs_3(str1,str2,i + 1,j,memoiz),lcs_3(str1, str2, i, j + 1, memoiz));
+            memoiz.put(key,output);
+            return output;
         }
-        return i;
+    }
+
+    public static int lcs_3(String str1,String str2) {
+        HashMap<String,Integer> memoiz = new HashMap<>();
+        return lcs_3(str1,str2,0,0,memoiz);
+    }
+
+    /**
+     * Dynamic Programming solution:
+     * Time Complexity: O(nm)
+     * Space Complexity: O(mn)
+     *
+     * @param str1
+     * @param str2
+     * @return
+     */
+    public static int lcs_4(String str1,String str2) {
+        int n = str1.length();
+        int m = str2.length();
+return 0;
     }
 }
