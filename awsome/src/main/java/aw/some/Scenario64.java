@@ -78,6 +78,11 @@ public class Scenario64 {
     // Space Complexity: O(nm)
     public static int lcs_3(String str1, String str2, int i, int j, HashMap<String,Integer> memoiz) {
         String key = i + " " + j;
+        if(memoiz.containsKey(key)) {
+            return memoiz.get(key);
+        } else if (i == str1.length() || j == str2.length()) {
+            return 0;
+        }
         return i;
     }
 }
