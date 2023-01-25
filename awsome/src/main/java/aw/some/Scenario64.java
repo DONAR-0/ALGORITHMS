@@ -82,6 +82,10 @@ public class Scenario64 {
             return memoiz.get(key);
         } else if (i == str1.length() || j == str2.length()) {
             return 0;
+        } else if (str1.charAt(i) == str2.charAt(j)) {
+            return 1 + lcs_3(str1, str2, i + 1, j + 1, memoiz);
+        } else {
+
         }
         return i;
     }
