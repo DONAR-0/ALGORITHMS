@@ -37,4 +37,12 @@ public class Scenario64Tests {
     public void testScenarioLogestCommonSubsequences_4(){
         LOGGER.info("{}",Scenario64.lcs_4("longcommonsub","common"));
     }
+
+
+    @Test
+    @DisplayName("TEST_5")
+    public void testScenarioLogestCommonSubsequences_5(){
+        LOGGER.info("{}",Scenario64.lcs_5("longcommonsub","common"));
+    }
+
 }
