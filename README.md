@@ -66,6 +66,9 @@
 ###### [Scenario63](/awsome/src/main/java/aw/some/Scenario63.java) :  Arraylist Permutation
 ###### [Scenario64](/awsome/src/main/java/aw/some/Scenario64.java) :  Lowest common subsequences
 ###### [Scenario65](/awsome/src/main/java/aw/some/Scenario65.java) :  Lowest consecutive sequence
+###### [Scenario66](/awsome/src/main/java/aw/some/Scenario66.java) :  Edit Distance between Strings
+###### [Scenario67](/awsome/src/main/java/aw/some/Scenario67.java) :  Logest Common Substring
+###### [Scenario68](/awsome/src/main/java/aw/some/Scenario68.java) :  Smallest nummber after removing number
 
 
 
