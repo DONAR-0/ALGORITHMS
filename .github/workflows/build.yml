@@ -298,6 +298,21 @@ jobs:
         run: echo ==============================  Scenario65tests ====================================
           \ && cd awsome && mvn test -Dtest="Scenario65Tests"
 
+
+      - name: Test Scenario66test
+        run: echo ==============================  Scenario66tests ====================================
+          \ && cd awsome && mvn test -Dtest="Scenario66Tests"
+
+
+      - name: Test Scenario67test
+        run: echo ==============================  Scenario67tests ====================================
+          \ && cd awsome && mvn test -Dtest="Scenario67Tests"
+
+
+      - name: Test Scenario68test
+        run: echo ==============================  Scenario68tests ====================================
+          \ && cd awsome && mvn test -Dtest="Scenario68Tests"
+
       - name: Test All Scenarios
         run: echo ==============================  All The Scenario ====================================
           \ && cd awsome && mvn test
