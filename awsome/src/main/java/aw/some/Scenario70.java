@@ -19,12 +19,7 @@ public class Scenario70 {
                 intervals[i] = new int[0];
             }
         }
-        ArrayList<int[]> output = new ArrayList<>();
-        for (int[] interval: intervals) {
-            if (intervals.length != 0) {
-                output.add(interval);
-            }
-        }
+        ArrayList<int[]> output = new ArrayList<>(Arrays.asList(intervals));
         return output.toArray(new int[output.size()][2]);
     }
 }
