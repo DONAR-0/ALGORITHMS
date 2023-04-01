@@ -28,8 +28,25 @@ public class Scenario72 {
         return knapsack_1(values,weights,maxWeights,0);
     }
 
-    public static int knapsack(int[] values, int[] weights, int maxWeight, int i, HashMap<String,Integer> memoiz) {
+    public static int knapsack_2(int[] values, int[] weights, int maxWeight, int i, HashMap<String,Integer> memoiz) {
         String key = i + " " + maxWeight;
-        return maxWeight;
+        if (memoiz.containsKey(key)) {
+            return memoiz.get(key);
+        } else if (i == values.length) {
+            return 0;
+        } else if (weights[i] > maxWeight) {
+            int output = knapsack_2(values,weights,maxWeight,i + 1,memoiz);
+            memoiz.put(key,output);
+            return output;
+        } else {
+            int output = Math.max(values[i] + knapsack_2(values,weights,maxWeight - weights[i],i + 1,memoiz),knapsack_2(values,weights,maxWeight,i +1 ,memoiz));
+            memoiz.put(key,output);
+            return output;
+        }
+    }
+
+    public static int knapsack_2(int[] values,int[] weights,int maxweights) {
+        HashMap<String,Integer> memoize = new HashMap<>();
+        return knapsack_2(values,weights,maxweights,0,memoize);
     }
 }
