@@ -74,3 +74,4 @@
 ###### [Scenario71](/awsome/src/main/java/aw/some/Scenario71.java) :  Maximum Path Sum
 ###### [Scenario72](/awsome/src/main/java/aw/some/Scenario72.java) :  0-1 Knapsack problem
 ###### [Scenario73](/awsome/src/main/java/aw/some/Scenario73.java) :  Shortest Palindrome
+###### [Scenario74](/awsome/src/main/java/aw/some/Scenario74.java) :  Min Coin Change Problem
