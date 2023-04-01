@@ -69,6 +69,7 @@
 ###### [Scenario66](/awsome/src/main/java/aw/some/Scenario66.java) :  Edit Distance between Strings
 ###### [Scenario67](/awsome/src/main/java/aw/some/Scenario67.java) :  Logest Common Substring
 ###### [Scenario68](/awsome/src/main/java/aw/some/Scenario68.java) :  Smallest nummber after removing number
-
-
-
+###### [Scenario69](/awsome/src/main/java/aw/some/Scenario69.java) :  Insert Intervals
+###### [Scenario70](/awsome/src/main/java/aw/some/Scenario70.java) :  Merge Intervals
+###### [Scenario71](/awsome/src/main/java/aw/some/Scenario71.java) :  Maximum Path Sum
+###### [Scenario72](/awsome/src/main/java/aw/some/Scenario72.java) :  0-1 Knapsack problem
