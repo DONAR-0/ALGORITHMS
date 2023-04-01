@@ -19,7 +19,7 @@ public class Scenario72Tests {
         LOGGER.info("{}",Scenario72.knapsack_1(values,weights,40));;
     }
     @Test
-    @DisplayName("Test knap sack Approach 1")
+    @DisplayName("Test knap sack Approach 2")
     public void testKnapSack_2(){
         int[] values = new int[] {10,20,30,40};
         int[] weights = new int[] {30,10,40,20};
