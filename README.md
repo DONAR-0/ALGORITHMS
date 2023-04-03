@@ -77,4 +77,5 @@
 ###### [Scenario74](/awsome/src/main/java/aw/some/Scenario74.java) :  Min Coin Change Problem
 ###### [Scenario75](/awsome/src/main/java/aw/some/Scenario75.java) :  Word Search in Matrix
 ###### [Scenario76](/awsome/src/main/java/aw/some/Scenario76.java) :  N-Queen Problem
+###### [Scenario77](/awsome/src/main/java/aw/some/Scenario77.java) :  Word Ladder 
 
