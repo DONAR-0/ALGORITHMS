@@ -79,4 +79,5 @@
 ###### [Scenario76](/awsome/src/main/java/aw/some/Scenario76.java) :  N-Queen Problem
 ###### [Scenario77](/awsome/src/main/java/aw/some/Scenario77.java) :  Word Ladder 
 ###### [Scenario78](/awsome/src/main/java/aw/some/Scenario78.java) :  Longest Increaseing Subsequence 
+## Current version: 4.0
 
