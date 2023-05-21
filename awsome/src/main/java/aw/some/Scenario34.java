@@ -33,7 +33,7 @@ public class Scenario34 {
     }
 
     /**
-     * Cummlative array
+     * Cumulative array
      * TC: O(n2)
      * SPC: O(1)
      *

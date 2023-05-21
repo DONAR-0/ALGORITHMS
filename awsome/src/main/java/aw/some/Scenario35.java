@@ -2,6 +2,7 @@ package aw.some;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import v_4.Sc_5;
 
 public class Scenario35 {
 
@@ -9,6 +10,11 @@ public class Scenario35 {
 
     Tree root;
 
+    /**
+     * SPC: O(n)
+     * TC: O(n)
+     * @param root
+     */
     public static void reverseTree(Tree root) {
         if (root == null) return;
         Tree temp = root.left;
