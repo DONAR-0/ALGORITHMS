@@ -36,6 +36,12 @@ public class Scenario36 {
         return maxLength;
     }
 
+    /**
+     * TC: O(n)
+     * SPC: O(1)
+     * @param str
+     * @return
+     */
     public static int longestSubStringWithoutRepeating_2(String str){
        int maxLength = 0;
        int start = 0;
