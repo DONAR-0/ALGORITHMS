@@ -79,6 +79,13 @@ public class Sc_8 {
     }
 
 
+    /**
+     * Space Complexity: O(1)
+     * Time complexity: O(n)
+     *
+     * @param str
+     * @return
+     */
     public static int longestSubStringWithoutRepeating_4(String str){
        int maxLength = 0;
        int start = 0;
