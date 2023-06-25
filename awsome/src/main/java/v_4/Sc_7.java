@@ -1,6 +1,5 @@
 package v_4;
 
-import aw.some.Scenario35;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
