@@ -1,7 +1,5 @@
 package v_4;
 
-import aw.some.Scenario43;
-
 /**
  * Reversing a linked
  * list

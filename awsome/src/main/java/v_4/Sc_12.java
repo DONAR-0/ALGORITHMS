@@ -1,5 +1,8 @@
 package v_4;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
  * Longest Palindrome
  *
@@ -26,9 +29,15 @@ public class Sc_12 {
         return length;
     }
 
+    public static int[] longestPalindrome1(String string) {
+        int[] occurrences = new int[128];
+        for (char letter: string.toCharArray()) {
+            occurrences[(int) letter]++;
+        }
+        return occurrences;
+    }
     public static void main(String[] args) {
         System.out.println(longestPalindrome("peakaep"));
-        System.out.println(longestPalindrome("peakaepboo"));
-
+        System.out.println(Arrays.stream(longestPalindrome1("babababbaba")).boxed().collect(Collectors.toList()));
     }
 }

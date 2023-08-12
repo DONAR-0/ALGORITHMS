@@ -1,7 +1,5 @@
 package aw.some;
 
-import java.util.ArrayList;
-
 /**
  * Sort Linked List
  */
