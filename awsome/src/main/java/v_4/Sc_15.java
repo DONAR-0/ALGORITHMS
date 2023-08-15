@@ -68,6 +68,44 @@ public class Sc_15 {
     }
 
     private static Node mergeSortLists(Node head1,Node head2) {
-        return null;
+        Node ptr1 = head1;
+        Node ptr2 = head2;
+        Node retunrnHead = null;
+        Node tail = null;
+        Node lower;
+        while (ptr1 != null || ptr2 != null) {
+            if (ptr1 != null && ptr2 != null) {
+                if (ptr1.data < ptr2.data) {
+                    lower = ptr1;
+                    ptr1 = ptr1.next;
+                } else {
+                    lower = ptr2;
+                    ptr2 = ptr2.next;
+                }
+            } else if (ptr1 != null) {
+                lower = ptr1;
+                ptr1 = ptr1.next;
+            } else {
+                lower = ptr2;
+                ptr2 = ptr2.next;
+            }
+            if (retunrnHead == null) {
+                retunrnHead = lower;
+                tail = lower;
+            } else {
+                tail.next = lower;
+                tail = tail.next;
+            }
+        }
+        return retunrnHead;
+    }
+
+    /**
+     * Time Complexity: o(nlogn)
+     * Space Complexity: o(logn)
+     * @param list
+     */
+    public static void sortList_2(LinkedList list) {
+        list.head = mergeSort(list.head);
     }
 }
