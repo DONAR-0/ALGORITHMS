@@ -13,6 +13,7 @@ func TestArea(t *testing.T) {
 	}{
 		{stmein.Rectangle{12, 6}, 72.0},
 		{stmein.Circle{10}, 314.1592653589793},
+		{stmein.Triangle{Base: 12, Height: 6}, 36},
 	}
 
 	for _, tt := range areaTests {
