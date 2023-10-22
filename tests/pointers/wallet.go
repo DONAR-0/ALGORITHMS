@@ -1,6 +1,9 @@
 package wallet
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 type (
 	Bitcoin int
@@ -9,8 +12,11 @@ type (
 	}
 )
 
+var (
+	ErrInsufficientFunds = errors.New("cannot withdraw, insufficient funds")
+)
+
 func (w *Wallet) Deposit(amount Bitcoin) {
-	fmt.Printf("address of balance in Deposit is %v \n", &w.BalanceAmount)
 	w.BalanceAmount += amount
 }
 
@@ -18,8 +24,12 @@ func (w *Wallet) Balance() Bitcoin {
 	return w.BalanceAmount
 }
 
-func (w *Wallet) WithDraw(amount Bitcoin) {
+func (w *Wallet) WithDraw(amount Bitcoin) error {
+	if amount > w.BalanceAmount {
+		return ErrInsufficientFunds
+	}
 	w.BalanceAmount -= amount
+	return nil
 }
 
 func (b Bitcoin) String() string {
