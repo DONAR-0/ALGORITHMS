@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 
+	"github.com/DONAR-0/ALGORITHMS/tests/gomind/activation"
 	"github.com/DONAR-0/ALGORITHMS/tests/gomind/layer"
 )
 
