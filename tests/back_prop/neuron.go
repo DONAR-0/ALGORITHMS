@@ -76,5 +76,3 @@ func (n *neuron) calculatePdErrorWrtTotalNetInputofOutputNeuron(targetOutput flo
 	// // https://github.com/surenderthakran/back-propagation-demo/blob/master/neuron.go
 	return float64(0)
 }
-
-// }
