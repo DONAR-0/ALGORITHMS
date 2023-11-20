@@ -12,8 +12,8 @@ func main() {
 }
 
 func merge2(cs ...<-chan []string) <-chan []string {
-	chans := len(cs)
-	wait := make(chan struct{}, chans)
+	// chans := len(cs)
+	// wait := make(chan struct{}, chans)
 	return nil
 }
 
