@@ -3,13 +3,38 @@ package main
 import (
 	"fmt"
 	"io"
+	"net"
 	"os"
 	"strings"
 )
 
 func main() {
 	// fileReader()
-	stringReader()
+	// stringReader()
+	connReader()
+}
+
+func connReader() {
+	conn, err := net.Dial("tcp", "google.com:80")
+	if err != nil {
+		panic(err)
+	}
+	defer conn.Close()
+	fmt.Fprintf(conn, "Get Http 1.0\r\n\r\n")
+	buf := make([]byte, 5)
+	for {
+		n, err := conn.Read(buf)
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			fmt.Println(err)
+			break
+		}
+		if n > 0 {
+			fmt.Println(string(buf[:n]))
+		}
+	}
 }
 
 func stringReader() {
