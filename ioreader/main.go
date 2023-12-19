@@ -21,38 +21,12 @@ func connReader() {
 	}
 	defer conn.Close()
 	fmt.Fprintf(conn, "Get Http 1.0\r\n\r\n")
-	buf := make([]byte, 5)
-	for {
-		n, err := conn.Read(buf)
-		if err == io.EOF {
-			break
-		}
-		if err != nil {
-			fmt.Println(err)
-			break
-		}
-		if n > 0 {
-			fmt.Println(string(buf[:n]))
-		}
-	}
+	readerToStdout(conn, 5)
 }
 
 func stringReader() {
 	s := strings.NewReader("very short but interesting string")
-	buf := make([]byte, 1)
-	for {
-		n, err := s.Read(buf)
-		if err == io.EOF {
-			break
-		}
-		if err != nil {
-			fmt.Println(err)
-			break
-		}
-		if n > 0 {
-			fmt.Println(string(buf[:n]))
-		}
-	}
+	readerToStdout(s, 1)
 }
 
 func fileReader() {
@@ -61,9 +35,15 @@ func fileReader() {
 		panic(err)
 	}
 	defer f.Close()
-	buf := make([]byte, 3)
+	readerToStdout(f, 3)
+}
+
+// Refactor code to support good point
+
+func readerToStdout(r io.Reader, bufsize int) {
+	buf := make([]byte, bufsize)
 	for {
-		n, err := f.Read(buf)
+		n, err := r.Read(buf)
 		if err == io.EOF {
 			break
 		}
@@ -73,7 +53,7 @@ func fileReader() {
 		}
 		if n > 0 {
 			fmt.Println(string(buf[:n]))
-			// fmt.Println(buf)
 		}
 	}
+
 }
