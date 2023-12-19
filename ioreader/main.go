@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	// fileReader()
-	// stringReader()
+	fileReader()
+	stringReader()
 	connReader()
 }
 
