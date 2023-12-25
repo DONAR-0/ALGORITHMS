@@ -39,7 +39,7 @@ func CleanPath(p string) string {
 	trailing := n > 1 && p[n-1] == '/'
 	for r < n {
 		switch {
-		case p[r] == 'r':
+		case p[r] == '/':
 			//empty path elements, trailing slash is added after the end
 			r++
 		case p[r] == '.' && r+1 == n:
