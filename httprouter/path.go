@@ -73,6 +73,7 @@ func CleanPath(p string) string {
 			// Add Slash if needed.
 			if w > 1 {
 				bufApp(&buf, p, w, '/')
+				w++
 			}
 
 			// Copy element
@@ -85,12 +86,15 @@ func CleanPath(p string) string {
 	}
 	if trailing && w > 1 {
 		bufApp(&buf, p, w, '/')
-		// w = w + 1
+		w++
 	}
 	// if the original string was not modified ( or only shorthand at the end),
 	// return the respective substring of the original string.
 	// Otherwise return a new string from the buffer.
-	return p
+	if len(buf) == 0 {
+		return p[:w]
+	}
+	return string(buf[:w])
 }
 
 // Internal Helper to lazily create a buffer if necessary

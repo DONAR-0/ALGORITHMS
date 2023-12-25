@@ -2,11 +2,37 @@ package httprouterv2
 
 import "testing"
 
+func TestPathClean(t *testing.T) {
+	for _, test := range cleanTests {
+		if s := CleanPath(test.path); s != test.result {
+			if s := CleanPath(test.path); s != test.result {
+				t.Errorf("CleanPath(%q) = %q, want := %q", test.path, s, test.result)
+			}
+			if s := CleanPath(test.result); s != test.result {
+				t.Errorf("CleanPath(%q) = %q, want := %q", test.result, s, test.result)
+			}
+		}
+	}
+}
+
+func TestPathCleanMalloc(t *testing.T) {
+	if testing.Short() {
+		t.Skip("skipping malloc count in short mode")
+	}
+	for _, test := range cleanTests {
+		test := test
+		allocs := testing.AllocsPerRun(100, func() { CleanPath(test.result) })
+		if allocs > 0 {
+			t.Errorf("CleanPath(%q): %v allocs,want zero", test.result, allocs)
+		}
+	}
+}
+
 type cleanPathTest struct {
 	path, result string
 }
 
-var cleanTest = []cleanPathTest{
+var cleanTests = []cleanPathTest{
 	// Already clean
 	{"/", "/"},
 	{"/abc", "/abc"},
@@ -56,17 +82,4 @@ var cleanTest = []cleanPathTest{
 	{"abc/./../def", "/def"},
 	{"abc//./../def", "/def"},
 	{"abc/../../././../def", "/def"},
-}
-
-func TestPathClean(t *testing.T) {
-	for _, test := range cleanTest {
-		if s := CleanPath(test.path); s != test.result {
-			if s := CleanPath(test.path); s != test.result {
-				t.Errorf("CleanPath(%q) = %q, want := %q", test.path, s, test.result)
-			}
-			if s := CleanPath(test.result); s != test.result {
-				t.Errorf("CleanPath(%q) = %q, want := %q", test.result, s, test.result)
-			}
-		}
-	}
 }
