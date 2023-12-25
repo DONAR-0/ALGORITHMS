@@ -85,7 +85,7 @@ func CleanPath(p string) string {
 	}
 	if trailing && w > 1 {
 		bufApp(&buf, p, w, '/')
-		w++
+		// w = w + 1
 	}
 	// if the original string was not modified ( or only shorthand at the end),
 	// return the respective substring of the original string.
